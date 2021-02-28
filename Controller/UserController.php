@@ -6,7 +6,7 @@ class UserController extends User{
         if (isset($_POST["submit"])){
             $this->loginUserModel();
         } else {
-            header("Location: index.php");
+            header("Location: login.php");
             exit();
         }
     }

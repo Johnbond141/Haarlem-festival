@@ -8,7 +8,7 @@ require 'DAL/Db.php';
 
             //Check for empty input
             if (empty($username) || empty($pwd)){
-                header("location: index.php?error=emptyinput");
+                header("location: login.php?error=emptyinput");
                 exit();
             }
 
@@ -17,7 +17,7 @@ require 'DAL/Db.php';
             $stmt = mysqli_stmt_init($conn);
             if (mysqli_stmt_prepare($stmt, $sql))
             {
-                header("location: index.php?error=stmtfailed");
+                header("location: login.php?error=stmtfailed");
             }
             mysqli_stmt_bind_param($stmt, "ss", $username, $username);
             mysqli_stmt_execute($stmt);
@@ -28,7 +28,7 @@ require 'DAL/Db.php';
             {
                 $uidExists = $row;
             } else{
-                header("location: index.php?error=wronglogin");
+                header("location: login.php?error=wronglogin");
                 exit();
             }
             mysqli_stmt_close($stmt);
@@ -38,7 +38,7 @@ require 'DAL/Db.php';
 
             //Check if the password is correct
             if ($checkPwd === false) {
-                header("location: index.php?error=wronglogin");
+                header("location: login.php?error=wronglogin");
                 exit();
             }
             //Start a session when everything is correct
@@ -46,7 +46,7 @@ require 'DAL/Db.php';
                 session_start();
                 $_SESSION["userid"] = $uidExists["usersId"];
                 $_SESSION["useruid"] = $uidExists["usersUid"];
-                header("location: index.php");
+                header("location: login.php");
                 exit();
             }
         }
