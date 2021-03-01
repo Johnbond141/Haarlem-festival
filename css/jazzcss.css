@@ -1,0 +1,70 @@
+body{
+    background-color: #ECECEC;
+    margin: 0 auto;
+}
+
+
+.header{
+    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/jazzheader.png");
+    background-size: cover;
+    width: auto;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1.eventhead{
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    margin: auto;
+    padding-top: 80px;
+    font-size: 50px;
+}
+
+h2.slogan{
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 2px 0px rgba(153, 130, 246, 0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 350px;
+    background-color: white;
+    vertical-align: middle;
+    border-radius: 28px;
+}
+
+section.container{
+    margin-top: 60px;
+    width: auto;
+    height: 400px;
+    background-color: #9982F6;
+    display: flex;
+    position: relative;
+}
+
+article.box1{
+    width: 1100px;
+    height: 300px;
+    margin: auto;
+    margin-right: 0px;
+    background-image: url("../img/buyticketsjazz.png");
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    
+}
+
+article.box2{
+    position: relative;
+    font-weight: bold;
+    width: 20%;
+    height: 241px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    padding-right: 300px;
+    top:-0.5%;
+}
+
