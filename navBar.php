@@ -15,35 +15,62 @@ require 'Controller/UserController.php';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
   <body>
-    <nav class="navbar">
-      <a href="index.php">Home</a>
 
-      <section class="dropdown">
-        <button class="dropbtn">Info
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <section class="dropdown-content">
-          <a href="#">Tickets</a>
-          <a href="#">Artists</a>
-          <a href="#">About</a>
-          <a href="#">Contact us</a>
-        </section>
-      </section>
+    <section id="masthead">
+		   <section class="container">
+         <a href="index.php">
+           <article class="logo">
+             <img src="img/LogoHF.png">
+  			   </article>
+         </a>
 
-      <a href="#">Create program</a>
+         <nav class="navbar">
 
-      <section class="dropdown">
-        <button class="dropbtn">Events
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <section class="dropdown-content">
-          <a href="#">Jazz</a>
-          <a href="#">Food</a>
-          <a href="#">Dance</a>
-        </section>
-      </section>
+           <section>
+             <article class="">
+               <a href="login.php">Login</a>
+             </article>
+           </section>
 
-      <a href="login.php">Login</a>
-    </nav>
+           <section class="dropdown">
+             <button class="dropbtn">Events
+               <i class="fa fa-caret-down"></i>
+             </button>
+             <article class="dropdown-content">
+               <a href="#">Jazz</a>
+               <a href="#">Food</a>
+               <a href="#">Dance</a>
+             </article>
+           </section>
+
+           <section>
+             <article class="">
+               <a href="#">Create program</a>
+             </article>
+           </section>
+
+
+           <section class="dropdown">
+             <button class="dropbtn">Info
+               <i class="fa fa-caret-down"></i>
+             </button>
+             <article class="dropdown-content">
+               <a href="#">Tickets</a>
+               <a href="#">Artists</a>
+               <a href="#">About</a>
+               <a href="#">Contact us</a>
+             </article>
+           </section>
+
+           <section>
+             <article class="">
+               <a href="index.php">Home</a>
+             </article>
+           </section>
+         </nav>
+
+		   </section>
+	  </section>
+
   </body>
 </html>
