@@ -19,7 +19,7 @@
     <section class="container">
         <article class="box1"></article>
         <article class="box2">
-            The greatest jazz artisti will be performing
+            The greatest jazz artists will be performing
             at the Haarlem Festival. There will be shown a variety
             of different jazz styles. Order your tickets
             while you still can and we hope to see you there.
@@ -28,6 +28,22 @@
             artist
             you can scroll down and go to the artist page.
         </article>
+    </section>
+    <section class="wrapper">
+        <section class="container2">
+            <article class="box3">
+                Some great artist will be performing on the Haarlem festival.
+                Such as The Nordians and Ntjam Rosie.
+                Make sure to not miss out on any of them.
+                If you need more information about the performing
+                times and the location before buying your tickets
+                you can find a button below.
+                
+            </article>
+            <article class="box4">
+                <img src="img/jazz2.png"  width="500px" height="auto" alt="">
+            </article>
+        </section>
     </section>
 
 </body>
