@@ -67,6 +67,7 @@ article.box2{
     padding: 30px;
     padding-right: 300px;
     top:-0.5%;
+    display: flex;
 }
 
 section.wrapper{
@@ -91,12 +92,9 @@ section.container2{
     width: 97%;
     height: 95%;
     background-color: #9982F6;
-    
-    
 }
 
 article.box3{
-    
     font-weight: bold;
     width: 40%;
     height: 241px;
@@ -108,5 +106,55 @@ article.box4{
     margin-top: 75px;
     margin-left: 40px;
 }
+
+button.buyjazz{
+    position: absolute;
+    justify-content: right;
+    margin-left: 60px;
+    width: 120px;
+    height: 40px;
+    top: 75%;
+    left: 60%;
+    background-color: transparent;
+    padding: 10px 10px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-bottom: 1px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+button.artistinfo{
+    background-color: transparent;
+    position: absolute;
+    width: 20%;
+    height: 100px;
+    top: 60%;
+    left:12%;
+    font-size: 16px;
+    font-weight: bold;
+    border-color: transparent;
+  border: none;
+  
+  padding: 15px 32px;
+
+  
+
+  cursor: pointer;
+}
+
 
 

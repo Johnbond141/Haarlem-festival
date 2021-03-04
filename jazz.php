@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -27,6 +29,7 @@
             For more information about the performing
             artist
             you can scroll down and go to the artist page.
+            <button class="buyjazz"><i class="arrow right"></i> Buy tickets</button>
         </article>
     </section>
     <section class="wrapper">
@@ -38,7 +41,8 @@
                 If you need more information about the performing
                 times and the location before buying your tickets
                 you can find a button below.
-                
+
+                <button class="artistinfo">Artist Information</button>
             </article>
             <article class="box4">
                 <img src="img/jazz2.png"  width="500px" height="auto" alt="">
