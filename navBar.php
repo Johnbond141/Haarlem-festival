@@ -17,7 +17,8 @@ require 'Controller/UserController.php';
   <body>
 
     <section id="masthead">
-		   <section class="container">
+		   <section class="containerNav">
+
          <a href="index.php">
            <article class="logo">
              <img src="img/LogoHF.png">
@@ -27,15 +28,19 @@ require 'Controller/UserController.php';
          <nav class="navbar">
 
            <section>
-             <article class="">
+             <article class="shoppingcart">
+               <a href="#"><img src="img/shopping-cart.png"></a>
+             </article>
+           </section>
+
+           <section>
+             <article>
                <a href="login.php">Login</a>
              </article>
            </section>
 
            <section class="dropdown">
-             <button class="dropbtn">Events
-               <i class="fa fa-caret-down"></i>
-             </button>
+             <button class="dropbtn1">Events</button>
              <article class="dropdown-content">
                <a href="#">Jazz</a>
                <a href="#">Food</a>
@@ -44,16 +49,14 @@ require 'Controller/UserController.php';
            </section>
 
            <section>
-             <article class="">
+             <article>
                <a href="#">Create program</a>
              </article>
            </section>
 
 
            <section class="dropdown">
-             <button class="dropbtn">Info
-               <i class="fa fa-caret-down"></i>
-             </button>
+             <button class="dropbtn">Info</button>
              <article class="dropdown-content">
                <a href="#">Tickets</a>
                <a href="#">Artists</a>
@@ -63,7 +66,7 @@ require 'Controller/UserController.php';
            </section>
 
            <section>
-             <article class="">
+             <article >
                <a href="index.php">Home</a>
              </article>
            </section>
