@@ -3,11 +3,17 @@ body, html {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
 .login{
     background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/background2.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 7em;
 }
 .jumbotron-img{
     background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/settings.png");
@@ -53,8 +59,6 @@ body, html {
     width: 22%;
     margin: 4%;
     position: relative;
-    border-style: solid;
-    border-width: 2px;
 }
 .image{
     display: block;
@@ -151,7 +155,7 @@ body, html {
 .main {
     background-color: #FFFFFF;
     width: 400px;
-    height: 400px;
+    height: auto;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -242,6 +246,13 @@ a {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
     color: #E1BEE7;
     text-decoration: none
+}
+.validation{ !important;
+    text-align: center;
+    color: red;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0px;
+    margin: 0px;
 }
 
 @media (max-width: 600px) {

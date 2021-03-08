@@ -10,5 +10,21 @@ class UserController extends User{
             exit();
         }
     }
-
+    public function resetPasswordRequestContr()
+    {
+        if (isset($_POST["reset-request-submit"])){
+            $this->resetPasswordRequestModel();
+        } else {
+            header("location: index.php");
+        }
+    }
+    //Controller for actually resetting the password
+    public function resetPasswordContr()
+    {
+        if (isset($_POST["reset-password-submit"])){
+            $this->resetPasswordModel();
+        } else {
+            header("location: index.php");
+        }
+    }
 }

@@ -16,24 +16,24 @@ include_once 'header.php';
         </section>
         <section class="row">
             <section class="column">
-                <h2>Edit Pages</h2>
+                <h3>Edit Pages</h3>
             </section>
             <section class="column">
-                <h2>Edit Program</h2>
+                <h3>Edit Program</h3>
             </section>
             <section class="column">
-                <h2>Show Invoices</h2>
+                <h3>Show Invoices</h3>
             </section>
         </section>
         <section class="row">
             <section class="column">
-                <h2>Register Payment</h2>
+                <h3>Register Payment</h3>
             </section>
             <section class="column">
-                <h2>Export Data</h2>
+                <h3>Export Data</h3>
             </section>
             <section class="column">
-                <h2>Upload Images</h2>
+                <h3>Upload Images</h3>
             </section>
         </section>
     </section>
