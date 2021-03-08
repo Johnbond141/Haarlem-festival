@@ -24,10 +24,10 @@ body, html {
 .logo img {
   object-fit: contain;
   position: fixed;
-  float: left;
-  max-width: 16%;
-  max-height:15%;
+  width: 16%;
+  height: 15%;
   margin-top: 1.5%;
+  margin-left: -3%;
 }
 
 /* --------- End Logo --------- */
@@ -36,7 +36,10 @@ body, html {
 
 #masthead {
     width: calc(100vw);
+    top: 0;
+    left: 0;
     position: fixed;
+    z-index: 500;
 }
 
 .navbar {
@@ -50,7 +53,7 @@ body, html {
   font-size: 26px;
   padding: 1% 5%;
   text-decoration: none;
-  margin: 14px;
+  margin: 0.9%;
 }
 
 .dropdown {
@@ -64,7 +67,7 @@ body, html {
   border: none;
   outline: none;
   color: black;
-  padding: 82% 0%;
+  margin-top: 63%;
   background-color: inherit;
 }
 
@@ -74,7 +77,7 @@ body, html {
   border: none;
   outline: none;
   color: black;
-  padding: 46% 0%;
+  margin-top: 39%;
   background-color: inherit;
 }
 
@@ -86,14 +89,14 @@ body, html {
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
+  width: 9%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 14px 16px;
+  padding: 1% 5%;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -110,8 +113,8 @@ body, html {
 }
 
 .shoppingcart img{
-  width: 50px;
-  margin-top: -10px;
+  width: 45%;
+  margin-top: -8%;
 }
 
 /* --------- End Navigation bar --------- */
@@ -123,7 +126,7 @@ body, html {
     background-size: cover;
     background-position: center;
     width: auto;
-    height: 450px;
+    height: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,10 +134,10 @@ body, html {
 
 h1.indexTitle{
     color: white;
-    text-shadow: 2px 2px black;
+    text-shadow: 3px 3px black;
     text-align: center;
     margin: auto;
-    padding-top: 150px;
+    padding-top: 10%;
     font-size: 50px;
 }
 
@@ -142,79 +145,165 @@ h2.indexSlogan{
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 2px 0px rgba(153, 130, 246, 0.5);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
     background-color: white;
     vertical-align: middle;
-    width: 570px;
+    width: 30%;
     border-radius: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 2.5%;
 }
 
 /* --------- End Header --------- */
 
-
-
 /* ------------------- Body ------------------- */
 
-/* --------- Quickbar --------- */
-
 #midsection {
-  background: blue;
+  /* background: blue; */
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
 .containerBody {
-  background: green;
+  /* background: green; */
   width: 100%;
-  height: 40%;
+  height: 120%;
   position: absolute;
 }
 
+/* ------------------- End Body ------------------- */
+
+/* --------- Quickbar --------- */
+
 .quickbar {
-  width: 60%;
-  height: 50%;
-  background-color: red;
-  margin-left: 20%;
-  margin-top: 10;
+  width: 85%;
+  height: 19%;
+  /* background-color: red; */
+  margin-left: 7.5%;
 }
 
 .backgroundQuickbar1 {
+  position: absolute;
   background-color: white;
-  width: 20%;
-  height: 30%;
+  width: 23%;
+  height: 14%;
+  margin-top: 2%;
 }
 
 .backgroundQuickbar2 {
+  position: absolute;
   background-color: white;
-  width: 20%;
-  height: 30%;
+  width: 23%;
+  height: 14%;
+  margin-top: 2%;
+  margin-left: 30.5%;
 }
 
 .backgroundQuickbar3 {
+  position: absolute;
   background-color: white;
-  width: 20%;
-  height: 30%;
+  width: 23%;
+  height: 14%;
+  margin-top: 2%;
+  margin-left: 61.8%;
 }
 
-/* .quickbar1 {
-  width: 20%;
-  height: 20%;
-  font-size: 26px;
+.quickbarButton {
+  width: 92%;
+  height: 84%;
+  margin-top: 2.8%;
+  margin-left: 3.9%;
   border: none;
   outline: none;
-  padding: 43% 0%;
   background-color: #7d5cccd4;
-} */
+}
 
+.quickbarButton img {
+  float: left;
+  margin-top: 5%;
+  margin-left: 4%;
+  width: 15%;
+  height: 50%;
+}
 
-
+.quickbarButton p {
+  font-weight: bold;
+  font-size: 34px;
+  margin-right: 40%;
+  width: 70%;
+}
 
 /* --------- End Quickbar --------- */
 
-/* ------------------- End Body ------------------- */
+/* --------- Events --------- */
+
+.hoverEvents {
+  width: 85%;
+  height: 40%;
+  /* background-color: yellow; */
+  margin-left: 7.5%;
+}
+
+.backgroundEvent1 {
+  position: absolute;
+  background-color: white;
+  width: 23%;
+  height: 35%;
+  margin-top: 2%;
+}
+
+.backgroundEvent2 {
+  position: absolute;
+  background-color: white;
+  width: 23%;
+  height: 35%;
+  margin-top: 2%;
+  margin-left: 30.5%;
+}
+
+.backgroundEvent3 {
+  position: absolute;
+  background-color: white;
+  width: 23%;
+  height: 35%;
+  margin-top: 2%;
+  margin-left: 61.8%;
+}
+
+.imageZoom {
+  position: relative;
+  overflow: hidden;
+  width: 92%;
+  height: 92%;
+  margin-top: 2.8%;
+  margin-left: 3.9%;
+  border: none;
+  outline: none;
+}
+
+.imageZoom img {
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+
+.imageZoom:hover img {
+  transform: scale(1.1);
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 3%;
+  left: 16px;
+  color: white;
+  font-size: 26px;
+  text-shadow: 2px 2px black;
+}
+
+/* --------- End Events --------- */
 
 /* ----------------------- End Index ----------------------- */
 

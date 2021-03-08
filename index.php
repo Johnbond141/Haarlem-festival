@@ -20,18 +20,43 @@
         <section class="quickbar">
 
           <article class="backgroundQuickbar1">
-            <button type="button" class="quickbar1">Artists</button>
+            <button type="button" class="quickbarButton"><img src="img/rounded-headphones.png" alt=""><p>Artists</p></button>
           </article>
 
           <article class="backgroundQuickbar2">
-            <button type="button" class="quickbar2">About</button>
+            <button type="button" class="quickbarButton"><img src="img/information.png" alt=""><p>About</p></button>
           </article>
 
           <article class="backgroundQuickbar3">
-            <button type="button" class="quickbar3">Contact us</button>
+            <button type="button" class="quickbarButton"><img src="img/contact-form.png" alt=""><p>Contact us</p></button>
           </article>
 
         </section>
+
+        <section class="hoverEvents">
+          <article class="backgroundEvent1">
+            <article class="imageZoom">
+              <img src="img/jazz1.jpg">
+              <article class="bottom-left">Jazz</article>
+            </article>
+          </article>
+
+          <article class="backgroundEvent2">
+            <article class="imageZoom">
+              <img src="img/food1.jpg">
+              <article class="bottom-left">Food</article>
+            </article>
+          </article>
+
+          <article class="backgroundEvent3">
+            <article class="imageZoom">
+              <img src="img/dance1.jpg">
+              <article class="bottom-left">Dance</article>
+            </article>
+          </article>
+
+        </section>
+
       </section>
     </section>
 

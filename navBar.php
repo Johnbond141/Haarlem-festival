@@ -17,7 +17,6 @@ require 'Controller/UserController.php';
   <body>
 
     <section id="masthead">
-		   <section class="containerNav">
 
          <a href="index.php">
            <article class="logo">
@@ -71,8 +70,6 @@ require 'Controller/UserController.php';
              </article>
            </section>
          </nav>
-
-		   </section>
 	  </section>
 
   </body>
