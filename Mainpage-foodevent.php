@@ -12,32 +12,28 @@ include_once 'header.php';
 <h2 class="Foodpage-subtitle">Good food is all you need</h2>
 
 <ol>
-	<li class="ClubsA">
+	<li class="Restaurant1">
 	Restaurant MR. & Mrs.
 		<p class="tien">
 	    	Lange Veerstraat 4
-		    <img src="img/foodpage-Shrimp.png "  
+		    <img src="Haarlem-festival/img/foodpage-Shrimp.png "  
 		    title="Restaurant MR. & Mrs."
    		    alt= "A picture of a shrimp"
 		    class= "Restaurantfoto">
             Dutch, Fish and seafood, European
 	    </p>
 	</li>
-				<li class="ClubsB">
-					VV Uno
-					<p class="tien">
-						VV Uno is een voetbalclub die is ontstaan omdat er te weinig plek was voor kinderen bij andere clubs. De club wil iedereen de kans geven om te kunnen sporten.
-						<img src="img/Schieten.png"
-						title="Voetbal"
-						alt= "A picture of a goalkeeper shooting the ball"
-						class= "sportfoto"
-						>
-						
-						<a href= https://www.vvuno.nl// class="link">
-						Website VV Uno.
-						</a>	
-					</p>
-				</li>
+	<li class="Restaurant2">
+	Ratatouille
+		<p class="tien">
+            Spaarne 96
+			<img src="img/Schieten.png"
+		    title="Ratatouille"
+			alt= "A picture of a goalkeeper shooting the ball"
+			class= "Restaurantfoto">
+            French, Fish and seafood, European
+		</p>
+	</li>
 				<li class="ClubsA">
 					SV Hoofddorp
 					<p class="tien">
