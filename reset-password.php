@@ -1,8 +1,8 @@
 <?php
 include_once 'header.php';
 ?>
-<div class="login">
-    <div class="main">
+<section class="login">
+    <section class="main">
         <p class="sign" align="center">Reset your password</p>
         <p class="sign" align="center" style="font-size: 14px; padding-top: 5px">An e-mail will be send to you with instructions on how to reset your password</p>
         <form class="form1" action="reset-password.php" method="post">
@@ -10,7 +10,7 @@ include_once 'header.php';
             <button class="submit" align="center" name="reset-request-submit">Submit</button>
             <p class="forgot" align="center" style="padding-bottom: 10px"><a href="index.php">Go back</p>
         </form>
-        <div class="validation">
+        <section class="validation">
             <?php
             if (isset($_POST["submit"])){
                 $userObj = new UserController();
@@ -19,5 +19,5 @@ include_once 'header.php';
             $userObj2 = new UserView();
             $userObj2->showResetPasswordRequest();
             ?>
-        </div>
-    </div>
+        </section>
+    </section>

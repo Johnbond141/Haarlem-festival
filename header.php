@@ -24,28 +24,28 @@ require 'Controller/UserController.php';
 if (isset($_SESSION["useruid"])){
     echo "
 <nav class='navbar navbar-inverse'>
-    <div class='container-fluid'>
-        <div class='navbar-header'>
+    <section class='container-fluid'>
+        <section class='navbar-header'>
             <a class='navbar-brand' href='dashboard.php'>Haarlem Festival</a>
-        </div>
+        </section>
         <ul class='nav navbar-nav'>
             <li><a href='dashboard.php'>Home</a></li>
             <li class='nav-item dropdown'>
                 <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 Events
                 </a>
-                <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                <section class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
                     <a class='dropdown-item' href='dashboard-jazz.php'>Jazz</a>
                     <a class='dropdown-item' href='dashboard-food.php'>Food</a>
                     <a class='dropdown-item' href='dashboard-dance.php'>Dance</a>
-                </div>
+                </section>
             </li>
         </ul>
         <ul class='nav navbar-nav navbar-right'>
             <li><a href='search.php'>Account details</a></li>
             <li><a  href='Model/logout.php'>Log out</a></li>
         </ul>
-    </div>
+    </section>
 </nav>
 ";
 }

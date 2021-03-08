@@ -1,8 +1,8 @@
 <?php
 include_once 'header.php';
 ?>
-<div class="login">
-    <div class="main">
+<section class="login">
+    <section class="main">
         <p class="sign" align="center">Reset your password</p>
         <?php
         if (isset($_POST["reset-password-submit"])){
@@ -30,5 +30,5 @@ include_once 'header.php';
             }
         }
         ?>
-    </div>
-</div>
+    </section>
+</section>
