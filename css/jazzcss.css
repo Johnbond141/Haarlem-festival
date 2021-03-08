@@ -112,7 +112,7 @@ article.box4{
     margin-left: 40px;
 }
 
-button.buyjazz{
+input.buyjazz{
     position: absolute;
     justify-content: right;
     margin-left: 60px;
@@ -135,6 +135,9 @@ button.buyjazz{
     display: inline-block;
     padding: 3px;
     margin-bottom: 1px;
+    position: absolute;
+    top: 80%;
+    left: 68.5%;
   }
   
   .right {
@@ -142,7 +145,7 @@ button.buyjazz{
     -webkit-transform: rotate(-45deg);
   }
 
-button.artistinfo{
+input.artistinfo{
     background-color: transparent;
     position: absolute;
     width: 20%;

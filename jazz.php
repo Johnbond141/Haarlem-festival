@@ -29,7 +29,9 @@
             For more information about the performing
             artist
             you can scroll down and go to the artist page.
-            <button class="buyjazz"><i class="arrow right"></i> Buy tickets</button>
+            <form action="">
+                <input type="submit" class="buyjazz" value="Buy tickets"><i class="arrow right"></i></input>
+            </form>
         </article>
     </section>
     <section class="wrapper">
@@ -42,7 +44,9 @@
                 times and the location before buying your tickets
                 you can find a button below.
 
-                <button class="artistinfo">Artist Information</button>
+                <form action="">
+                    <input type="submit" class="artistinfo" name="artistinfo" value="Artist Information">
+                </form>
             </article>
             <article class="box4">
                 <img src="img/jazz2.png"  width="500px" height="auto" alt="">
