@@ -168,7 +168,7 @@ h2.indexSlogan{
 .containerBody {
   /* background: green; */
   width: 100%;
-  height: 120%;
+  height: 230%;
   position: absolute;
 }
 
@@ -178,7 +178,7 @@ h2.indexSlogan{
 
 .quickbar {
   width: 85%;
-  height: 19%;
+  height: 10%;
   /* background-color: red; */
   margin-left: 7.5%;
 }
@@ -187,7 +187,7 @@ h2.indexSlogan{
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 14%;
+  height: 7%;
   margin-top: 2%;
 }
 
@@ -195,7 +195,7 @@ h2.indexSlogan{
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 14%;
+  height: 7%;
   margin-top: 2%;
   margin-left: 30.5%;
 }
@@ -204,7 +204,7 @@ h2.indexSlogan{
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 14%;
+  height: 7%;
   margin-top: 2%;
   margin-left: 61.8%;
 }
@@ -240,7 +240,7 @@ h2.indexSlogan{
 
 .hoverEvents {
   width: 85%;
-  height: 40%;
+  height: 23%;
   /* background-color: yellow; */
   margin-left: 7.5%;
 }
@@ -249,16 +249,16 @@ h2.indexSlogan{
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 35%;
-  margin-top: 2%;
+  height: 20%;
+  margin-top: 1%;
 }
 
 .backgroundEvent2 {
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 35%;
-  margin-top: 2%;
+  height: 20%;
+  margin-top: 1%;
   margin-left: 30.5%;
 }
 
@@ -266,8 +266,8 @@ h2.indexSlogan{
   position: absolute;
   background-color: white;
   width: 23%;
-  height: 35%;
-  margin-top: 2%;
+  height: 20%;
+  margin-top: 1%;
   margin-left: 61.8%;
 }
 
@@ -304,6 +304,35 @@ h2.indexSlogan{
 }
 
 /* --------- End Events --------- */
+
+/* --------- Social Media Feed --------- */
+
+.socialmedia {
+  width: 100%;
+  height: 61%;
+  /* background-color: pink; */
+  margin-top: -1.6%;
+}
+
+.socialmedia p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.socialmedia img {
+  width: 99%;
+}
+
+/* --------- Social Media Feed End --------- */
+
+/* --------- Partners --------- */
+
+
+
+
+/* --------- Partners End --------- */
+
 
 /* ----------------------- End Index ----------------------- */
 

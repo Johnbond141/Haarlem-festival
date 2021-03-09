@@ -1,5 +1,5 @@
 <?php
-    include_once 'navbar.php';
+    include_once 'navBar.php';
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +54,16 @@
               <article class="bottom-left">Dance</article>
             </article>
           </article>
+
+        </section>
+
+        <section class="socialmedia">
+          <p>FOLLOW US ON SOCIAL MEDIA</p>
+          <img src="img/social-media.png" alt="">
+        </section>
+
+        <section class="partners">
+          <p>PARTNERS</p>
 
         </section>
 
