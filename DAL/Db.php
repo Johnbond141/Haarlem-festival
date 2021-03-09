@@ -14,7 +14,5 @@ class Db{
         }
 
         return $conn;
-
-
     }
 }

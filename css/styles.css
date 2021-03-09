@@ -249,3 +249,116 @@ a {
         border-radius: 0px;
     }
 }
+
+/* --------- Navigation bar --------- */
+
+.Restaurants1
+{
+	width: 45%;
+	float: left;	
+	margin: 10px;
+	background-color : #8899AB;
+	font-size: 20px;
+	text-align: left;
+	list-style-type: none;
+}
+
+.Restaurants2
+{
+	width: 45%;
+	float: right;
+	margin: 10px;
+	background-color : #8899AB;
+	font-size: 20px;
+	text-align: left;
+	list-style-type: none;
+}
+
+
+/* --------- Navigation bar --------- */
+
+#masthead {
+    width: calc(100vw);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 500;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ECECEC;
+}
+
+.navbar a {
+  color: black;
+  float: right;
+  font-size: 26px;
+  padding: 1% 5%;
+  text-decoration: none;
+  margin: 0.9%;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  width: 100%;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  color: black;
+  margin-top: 63%;
+  background-color: inherit;
+}
+
+.dropdown .dropbtn1 {
+  width: 100%;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  color: black;
+  margin-top: 39%;
+  background-color: inherit;
+}
+
+.navbar a:hover {
+  text-decoration: underline solid #7d5cccd4 4px;
+  text-underline-position: under;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 9%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 1% 5%;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline solid #7d5cccd4 4px;
+  text-underline-position: under;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: #ECECEC;
+}
+
+.shoppingcart img{
+  width: 45%;
+  margin-top: -8%;
+}
+
+/* --------- End Navigation bar --------- */
+

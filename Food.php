@@ -1,11 +1,11 @@
 <?php
-	include_once 'navBar.php';
+	include 'navBar.php';
 ?>
 
 <html>
 	<body>
 
-		<section class="img-column-foodpage">
+    <section class="img-column-foodpage">
 			<img src="img/FoodEvent-banner.png" alt="Foodevent" style="width: 100%" class="image"> 
 		</section>
 
