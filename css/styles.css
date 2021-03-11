@@ -242,9 +242,9 @@ form.form1 {
     padding-top: 15px;
 }
 
-a {
+.dashboardButtonText {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
+    color: black;
     text-decoration: none
 }
 .validation{ !important;

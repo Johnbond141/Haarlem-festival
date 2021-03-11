@@ -16,24 +16,26 @@ include_once 'header.php';
         </section>
         <section class="row">
             <section class="column">
-                <h3>Edit Pages</h3>
+                <h3 class="dashboardButtonText">Edit Pages</h3>
             </section>
             <section class="column">
-                <h3>Edit Program</h3>
+                <a href="jazz-agenda.php">
+                    <h3 class="dashboardButtonText">Edit Program</h3>
+                </a>
             </section>
             <section class="column">
-                <h3>Show Invoices</h3>
+                <h3 class="dashboardButtonText">Show Invoices</h3>
             </section>
         </section>
         <section class="row">
             <section class="column">
-                <h3>Register Payment</h3>
+                <h3 class="dashboardButtonText">Register Payment</h3>
             </section>
             <section class="column">
-                <h3>Export Data</h3>
+                <h3 class="dashboardButtonText">Export Data</h3>
             </section>
             <section class="column">
-                <h3>Upload Images</h3>
+                <h3 class="dashboardButtonText">Upload Images</h3>
             </section>
         </section>
     </section>
