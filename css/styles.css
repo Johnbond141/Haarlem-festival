@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #ECECEC;
 }
 
 /* ----------------------- Index ----------------------- */
@@ -585,49 +586,99 @@ a {
 
 /* --------- Food Page --------- */
 
-.Restaurants1
+
+.Restaurants
 {
-	width: 35%;
-    height: 20%;
-	float: left;	
-	margin: 2%;
+	width: 32%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  min-height: 20%;
 	background-color : #9982F6;
 	font-size: 20px;
 	text-align: left;
 	list-style-type: none;
-    border: 20%;
-    border-style: solid;
-    border-color: black;
-    ;
+  float: left;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white;
 }
 
-.Restaurants2
+.Restaurantfoto
 {
-	width: 35%;
-    height: 20%;
-	float: right;
-	margin: 2%;
-    margin-right: 10%;
-	background-color : #9982F6;
-	font-size: 20px;
-	text-align: left;
-	list-style-type: none;
-    border: 20%;
-    border-style: solid;
-    border-color: black;
-    ;
+  max-width: 180px;
+  z-index: 1;
+  padding-left: 10%;
+  padding-top: 1%;
+  flex: 180px 0 0;
 }
 
-.restaurantfoto1
+h1.Restaurantnaam
 {
-    float: right;
-    margin: 5%;
-    clear: right;
+    font-style: italic;
+    padding-left: 6%;
+    font-size: 22px;
+    width: 50%;
 }
-.restaurantfoto2
+
+.RestaurantInfo
 {
-    float: left;
-    margin: 5%;
-    clear: left;
+  text-align: left;
+  width: 55%;
+  padding-left: 6%;
+  font-size: 15px;
 }
+
+h4.RestaurantInfoText
+{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px)
+{
+  .Restaurants
+  {
+      flex-direction: column;
+  }
+}
+
+.filterBar
+{
+  background-color: #9982F6;
+  height: 6%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+h1.foodFilterButton
+{
+  border-style: solid;
+  border-color: black;
+  background-color: #9982F6;
+  border-width: 1px;
+  font-size: 23px;
+  width: 15%;
+  text-align: center;
+  float: left;
+  height: 5.7%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.foodTypeInput
+{
+  font-size: 23px;
+  width: 20%;
+  text-align: center;
+  border-radius: 25px;
+  margin-top: 0.6%;
+  margin-left: 2%;
+  float: left;
+}
+
+
 /* --------- End Food page --------- */
