@@ -33,6 +33,8 @@
 					<br>
 					<br> Food: Dutch, Fish and seafood, European
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 				<h1 class="Restaurantnaam">Ratatouille</h1>
@@ -45,6 +47,8 @@
 					<br>
 					<br> Food: French, Fish and seafood, European
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 				<h1 class="Restaurantnaam">Restaurant ML</h1>			
@@ -57,6 +61,8 @@
 					<br>
 					<br> Food: Dutch, fish and seafood, European
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 				<h1 class="Restaurantnaam">Restaurant Fris</h1>
@@ -70,6 +76,8 @@
 					<br> Food: Dutch, European
 					<br>
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 				<h1 class="Restaurantnaam">Specktakel</h1>
@@ -82,6 +90,8 @@
 					<br>
 					<br> Food: European, International, Asian
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 			<h1 class="Restaurantnaam">Grand Cafe Brinkman</h1>
@@ -94,6 +104,8 @@
 					<br>
 					<br> Food: Dutch, European, Modern
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 			<h1 class="Restaurantnaam">Urban Frenchy Bistro Toujours</h1>
@@ -106,6 +118,8 @@
 					<br>
 					<br> Food: Dutch, fish and seafood, European
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 			<li class="Restaurants">
 			<h1 class="Restaurantnaam">The golden bull</h1>
@@ -118,6 +132,8 @@
 					<br>
 					<br> Food: Steakhouse, Argentinian, European
 				</p>
+				<button class="btnReserveren">Make reservation</button>
+				<button class="btnMeerinfo">More Information</button>
 			</li>
 		</ul>
 	</body>
