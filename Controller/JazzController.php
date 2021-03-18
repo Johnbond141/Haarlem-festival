@@ -1,8 +1,23 @@
 <?php
 require 'Model/Jazz.php';
 class JazzController extends Jazz{
-    public function jazzAgendaContr($day)
+    public function jazzAgendaGetAllDataContr($selectedDay)
     {
-        $this->get_all_data_thursday($day);
+        $result = $this->GetDataJazzAgenda($selectedDay);
+        return $result;
+    }
+    public function jazzAgendaGetEditData()
+    {
+        $row = $this->GetEditData();
+        return $row;
+    }
+    public function jazzAgendaUpdateContr(){
+        $this->UpdateJazzAgenda();
+    }
+    public function jazzAgendaAddContr(){
+        $this->AddJazzAgenda();
+    }
+    public function jazzAgendaDeleteContr(){
+        $this->DeleteJazzAgenda();
     }
 }

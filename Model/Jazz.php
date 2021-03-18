@@ -3,47 +3,53 @@ require 'DAL/Db.php';
 
 class Jazz extends Db
 {
-    function get_all_data_thursday($day)
-    {
+    public function GetDataJazzAgenda($selectedDay){
         $conn = $this->connect();
-        $result = mysqli_query($conn, "SELECT * FROM jazz_agenda WHERE Day = '$day'");
-        if (mysqli_num_rows($result) > 0) {
+        $result = $conn->query("SELECT * FROM jazz_agenda WHERE Day='$selectedDay' ORDER BY Time");
+        return $result;
+    }
+    public function GetEditData(){
+        $conn = $this->connect();
+        $id = $_GET['edit'];
+        $result = $conn->query("SELECT * FROM jazz_agenda WHERE performance_Id=$id");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    public function DeleteJazzAgenda(){
+        $conn = $this->connect();
+        $id = $_GET['delete'];
+        $conn->query("DELETE FROM jazz_agenda WHERE performance_Id=$id");
 
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '
-            <section id="overlay">
-                <section class="main">
-                    <p class="sign" align="center">Change performance</p>
-                    <form class="form1">
-                        <input name="Band" class="un" type="text" align="center" value="'.$row['Band'].'">
-                        <input name="Location" class="un" type="text" align="center" value="'.$row['Location'].'">
-                        <input name="Hall" class="un" type="text" align="center" value="'.$row['Hall'].'">
-                        <input name="Time" class="un" type="text" align="center" value="'.$row['Time'].'">
-                        <input name="Date" class="un" type="text" align="center" value="'.$row['Date'].'">
-                        <button class="submit" style="margin-left: 18%; margin-bottom: 5%" name="exit" onclick="overlayOff()">Exit</button>
-                        <button class="submit" align="center" name="save">Save</button>
-                    </form>
-                </section>
-            </section>
-            <article class="info-wrapper">
-                <h2>' . $row['Band'] . '</h2>
-                <p>' . $row['Location'] . ', ' . $row['Hall'] . '</p>
-                <p>' . $row['Time'] . ', ' . $row['Date'] . '</p>
-                <img src="img/edit.png" class="edit-icon" name="'.$row['Band'].'" onclick="overlayOn()">
-            </article>
-            <script>
-                function overlayOn(){
-                    document.getElementById("overlay").style.display = "block";
-                }
-                function overlayOff(){
-                    document.getElementById("overlay").style.display = "none";
-                }
-            </script>
-            ';
-            }
 
-        } else {
-            "<h3>Our database is not working</h3>";
-        }
+        header("location: ../jazz-agenda.php");
+    }
+    public function UpdateJazzAgenda(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $band = $_POST['band'];
+        $location = $_POST['location'];
+        $hall = $_POST['hall'];
+        $date = $_POST['date'];
+        $day = $_POST['day'];
+        $time = $_POST['time'];
+
+        $conn->query("UPDATE jazz_agenda SET Band='$band', Location='$location', Hall='$hall', Date='$date', Day='$day', Time='$time' WHERE performance_Id=$id");
+
+        header("location: ../jazz-agenda.php");
+    }
+    public function AddJazzAgenda(){
+        $conn = $this->connect();
+        $band = $_POST['band'];
+        $location = $_POST['location'];
+        $hall = $_POST['hall'];
+        $date = $_POST['date'];
+        $day = $_POST['day'];
+        $time = $_POST['time'];
+
+        $conn->query("INSERT INTO jazz_agenda (Band, Location, Hall, Date, Day, Time ) 
+                        VALUES ('$band', '$location', '$hall', '$date', '$day', '$time')");
+
+
+        header("location: ../jazz-agenda.php");
     }
 }
