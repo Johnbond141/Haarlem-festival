@@ -65,6 +65,36 @@
         <section class="partners">
           <p>PARTNERS</p>
 
+          <section class="partner1">
+            <article class="partnerImages">
+              <a href="https://www.pinkpop.nl/2021/" target="_blank"><img src="img/Partner-1.png" alt=""></a>
+            </article>
+          </section>
+
+          <section class="partner2">
+            <article class="partnerImages">
+              <img src="img/Partner-2.png" alt="">
+            </article>
+          </section>
+
+          <section class="partner3">
+            <article class="partnerImages">
+              <img src="img/Partner-3.png" alt="">
+            </article>
+          </section>
+
+          <section class="partner4">
+            <article class="partnerImages">
+              <a href="https://www.holland-dance.com/" target="_blank"><img src="img/Partner-4.png" alt=""></a>
+            </article>
+          </section>
+
+          <section class="partner5">
+            <article class="partnerImages">
+              <a href="https://www.q-dance.com/en/events/defqon-1/" target="_blank"><img src="img/Partner-5.png" alt=""></a>
+            </article>
+          </section>
+
         </section>
 
       </section>

@@ -30,7 +30,7 @@ body, html {
   margin-left: -3%;
 }
 
-/* --------- End Logo --------- */
+/* --------- Logo End--------- */
 
 /* --------- Navigation bar --------- */
 
@@ -117,7 +117,7 @@ body, html {
   margin-top: -8%;
 }
 
-/* --------- End Navigation bar --------- */
+/* --------- Navigation bar End--------- */
 
 /* --------- Header --------- */
 
@@ -154,7 +154,7 @@ h2.indexSlogan{
     margin-bottom: 2.5%;
 }
 
-/* --------- End Header --------- */
+/* --------- Header End --------- */
 
 /* ------------------- Body ------------------- */
 
@@ -172,7 +172,7 @@ h2.indexSlogan{
   position: absolute;
 }
 
-/* ------------------- End Body ------------------- */
+/* ------------------- Body End ------------------- */
 
 /* --------- Quickbar --------- */
 
@@ -234,7 +234,7 @@ h2.indexSlogan{
   width: 70%;
 }
 
-/* --------- End Quickbar --------- */
+/* --------- Quickbar End --------- */
 
 /* --------- Events --------- */
 
@@ -303,7 +303,7 @@ h2.indexSlogan{
   text-shadow: 2px 2px black;
 }
 
-/* --------- End Events --------- */
+/* --------- Events End --------- */
 
 /* --------- Social Media Feed --------- */
 
@@ -328,256 +328,79 @@ h2.indexSlogan{
 
 /* --------- Partners --------- */
 
+.partners {
+  width: 100%;
+  height: 15%;
+  margin-top: -1.6%;
+}
 
+.partners p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
 
+.partner1 {
+  position: absolute;
+  width: 9%;
+  height: 7%;
+  margin-left: 9.5%;
+}
+
+.partner2 {
+  position: absolute;
+  width: 9%;
+  height: 7%;
+  margin-left: 27.5%;
+}
+
+.partner3 {
+  position: absolute;
+  width: 9%;
+  height: 7%;
+  margin-left: 45.5%;
+}
+
+.partner4 {
+  position: absolute;
+  width: 9%;
+  height: 7%;
+  margin-left: 63.5%;
+}
+
+.partner5 {
+  position: absolute;
+  width: 9%;
+  height: 7%;
+  margin-left: 81.5%;
+}
+
+.backgroundEvent3 {
+  position: absolute;
+  background-color: white;
+  width: 23%;
+  height: 20%;
+  margin-top: 1%;
+  margin-left: 61.8%;
+}
+
+.partnerImages {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.partnerImages img {
+  transition: all 0.3s;
+  display: block;
+  transform: scale(1);
+}
+
+.partnerImages:hover img {
+  transform: scale(1.1);
+}
 
 /* --------- Partners End --------- */
 
-
-/* ----------------------- End Index ----------------------- */
-
-.login{
-    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/background2.png");
-    background-size: cover;
-}
-
-.jumbotron-img{
-    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/settings.png");
-    height: 30%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-.dashboard-txt{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 200%;
-    text-shadow: 0 0 3px black;
-}
-.dashboard-back{
-    background-color: #ECECEC;
-    height: 100%;
-}
-.dashboard-front {
-    background-color: #FFFFFF;
-    width: 70%;
-    height: 80%;
-    margin: 0 auto;
-    border-radius: 1.5em;
-    box-sizing: border-box;
-}
-.content{
-    padding: 10px;
-}
-.welcometxt{
-    width: 40%;
-}
-.img-row {
-    margin-left: 10%;
-}
-.img-column{
-    float: left;
-    width: 22%;
-    margin: 4%;
-    position: relative;
-    border-style: solid;
-    border-width: 2px;
-}
-.image{
-    display: block;
-}
-.overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #7d5cccd4;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-}
-.img-column:hover .overlay {
-    height: 100%;
-    cursor: pointer;
-}
-.overlay-text{
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center
-}
-.img-title{
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    color: white;
-    font-size: 200%;
-    text-shadow: 0 0 3px black;
-}
-.event-title{
-    font: italic bold 40px Arial;
-    text-align: center;
-}
-.event-content{
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-.row{
-    margin-left: 2%;
-}
-
-.column {
-    float: left;
-    width: 22%;
-    margin: 4%;
-    padding: 10px;
-    border-style: solid;
-    border-width: 2px;
-    text-align: center;
-    background-color: #9982F6;
-}
-.column:hover{
-    cursor: pointer;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.GoBackButton {
-    background-color:#9982f6;
-    border-radius:5px;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:22px;
-    padding:17px 23px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
-    margin-top: 1%;
-    margin-left: 1%;
-}
-.GoBackButton:hover {
-    background-color:#7264ad;
-}
-.GoBackButton:active {
-    position:relative;
-    top:1px;
-}
-/* Login Screen */
-.main {
-    background-color: #FFFFFF;
-    width: 400px;
-    height: 400px;
-    margin: 7em auto;
-    border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
-
-.sign {
-    padding-top: 40px;
-    margin: 5px;
-    color: #8C55AA;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-}
-
-.un {
-    width: 76%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-form.form1 {
-    padding-top: 40px;
-}
-
-.pass {
-    width: 76%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-
-.un:focus, .pass:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18) !important;
-
-}
-
-.submit {
-    cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #9C27B0, #E040FB);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-left: 35%;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-
-.forgot {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    padding-top: 15px;
-}
-
-a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    text-decoration: none
-}
-
-@media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-    }
-}
+/* ----------------------- Index End ----------------------- */
