@@ -1,5 +1,6 @@
 <?php
 require 'Controller/JazzController.php';
+require 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +76,7 @@ require 'Controller/JazzController.php';
                         <td>
                             <a href="jazz-agenda.php?edit=<?php echo $row['performance_Id']; ?>"
                                class="btn btn-info">Edit</a>
-                            <a href="jazz-agenda.php?delete=<?php echo $row['performance_Id']; ?>"
+                            <a href="functions.php?delete=<?php echo $row['performance_Id']; ?>"
                                class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
@@ -102,19 +103,10 @@ require 'Controller/JazzController.php';
             $time = $row['Time'];
             $update = true;
         }
-        if (isset($_POST['update'])){
-            $jazzContr->jazzAgendaUpdateContr();
-        }
-        if (isset($_POST['save'])){
-            $jazzContr->jazzAgendaAddContr();
-        }
-        if (isset($_GET['delete'])){
-            $jazzContr->jazzAgendaDeleteContr();
-        }
         ?>
         <section class="main" style="margin-top: 0">
             <p class="sign" style="margin-left: 36%">Add/Edit</p>
-            <form class="form1" action="jazz-agenda.php" method="post">
+            <form class="form1" action="functions.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input type="text" name="band" align="center" class="un" value="<?php echo $band; ?>" placeholder="band...">
                 <input type="text" name="location" align="center" class="un" value="<?php echo $location; ?>" placeholder="location...">
@@ -123,8 +115,7 @@ require 'Controller/JazzController.php';
                 <input type="text" name="day" align="center" class="un" value="<?php echo $day ?>" placeholder="day...">
                 <input type="text" name="time" align="center" class="un" value="<?php echo $time ?>" placeholder="time...">
                 <?php
-                if ($update == true):
-                    ?>
+                if ($update == true): ?>
                     <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="update">Update</button>
                 <?php else: ?>
                     <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="save">Save</button>

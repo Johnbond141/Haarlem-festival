@@ -21,7 +21,7 @@ class Jazz extends Db
         $conn->query("DELETE FROM jazz_agenda WHERE performance_Id=$id");
 
 
-        header("location: ../jazz-agenda.php");
+        header("location: jazz-agenda.php");
     }
     public function UpdateJazzAgenda(){
         $conn = $this->connect();
@@ -35,7 +35,7 @@ class Jazz extends Db
 
         $conn->query("UPDATE jazz_agenda SET Band='$band', Location='$location', Hall='$hall', Date='$date', Day='$day', Time='$time' WHERE performance_Id=$id");
 
-        header("location: ../jazz-agenda.php");
+        header("location: jazz-agenda.php");
     }
     public function AddJazzAgenda(){
         $conn = $this->connect();
@@ -50,6 +50,6 @@ class Jazz extends Db
                         VALUES ('$band', '$location', '$hall', '$date', '$day', '$time')");
 
 
-        header("location: ../jazz-agenda.php");
+        header("location: jazz-agenda.php");
     }
 }
