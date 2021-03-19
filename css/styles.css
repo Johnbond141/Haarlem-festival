@@ -732,3 +732,58 @@ h1.foodFilterButton
 
 
 /* --------- End Food page --------- */
+
+/* --------- Payment info Page --------- */
+
+.klantInfo
+{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  background-color: white;
+  width: 50%;
+  float: left;
+}
+
+.klantInfoForm
+{
+  background-color: #9982F6;
+  margin: 2%;
+  padding-left: 10%;
+}
+
+.betaalmethodeInfo
+{
+  background-color: white;
+  margin-right: 20%;
+  padding-bottom: 1%;
+}
+
+.betaalmethode
+{
+  background-color: #9982F6;
+  margin: 2%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.bankOpties
+{
+  background-color: white;
+  margin-right: 20%;
+  padding-left: 5%;
+}
+
+.kiesBank
+{
+  background-color: #9982F6;
+  margin: 2%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.infopageRSide
+{
+  width: 35%;
+  float: left;
+}
+/* --------- End Payment info page --------- */
