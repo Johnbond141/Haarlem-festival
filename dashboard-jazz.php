@@ -1,5 +1,8 @@
 <?php
 include_once 'header.php';
+if (!isset($_SESSION["useruid"])){
+    header("Location: index.php");
+}
 ?>
 <body>
 <section class="jumbotron-img">
@@ -18,11 +21,13 @@ include_once 'header.php';
             <section class="column">
                 <h3 class="dashboardButtonText">Edit Pages</h3>
             </section>
-            <a href="jazz-agenda.php">
+
             <section class="column">
+                <a href="jazz-agenda.php" style="text-decoration: none;">
                     <h3 class="dashboardButtonText">Edit Program</h3>
+                </a>
             </section>
-            </a>
+
             <section class="column">
                 <h3 class="dashboardButtonText">Show Invoices</h3>
             </section>

@@ -1,6 +1,10 @@
 <?php
 include_once 'header.php';
+if (!isset($_SESSION["useruid"])){
+    header("Location: index.php");
+}
 ?>
+
 
 <section class="jumbotron-img">
     <section class="dashboard-txt">
@@ -19,7 +23,7 @@ include_once 'header.php';
         </section>
         <section class="img-row">
             <section class="img-column">
-                <img src="img/jazz.jpg" alt="Jazz" style="width: 100%" class="image">
+                <img src="img/jazz.jpg" alt="Jazz" style="width: 100%;" class="image">
                 <a href="dashboard-jazz.php">
                     <section class="overlay">
                         <section class="overlay-text">Jazz</section>

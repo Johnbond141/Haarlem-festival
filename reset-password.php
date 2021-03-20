@@ -1,5 +1,8 @@
 <?php
 include_once 'header.php';
+if (!isset($_SESSION["useruid"])){
+    header("Location: index.php");
+}
 ?>
 <section class="login">
     <section class="main">

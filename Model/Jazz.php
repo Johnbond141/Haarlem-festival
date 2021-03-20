@@ -1,5 +1,4 @@
 <?php
-require 'DAL/Db.php';
 
 class Jazz extends Db
 {
