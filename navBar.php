@@ -43,7 +43,7 @@ require 'Controller/UserController.php';
              <article class="dropdown-content">
                <a href="#">Jazz</a>
                <a href="#">Food</a>
-               <a href="#">Dance</a>
+               <a href="dance.php">Dance</a>
              </article>
            </section>
 
