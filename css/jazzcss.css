@@ -532,7 +532,7 @@ img.haarleminfopic3{
     border-width: 0px;
     border-bottom-width: 5px;
     border-color: #9982F6;
-    
+    position: relative;
 }
 
 .programheader span{
@@ -540,7 +540,7 @@ img.haarleminfopic3{
 }
 
 .programheader h1{
-    margin-left: 38%;
+    margin-left: 770px;
 }
 
 .programheader h2{
@@ -554,13 +554,14 @@ section.program-container{
     background-color: white;
     border-radius: 15px;
     margin-top: 50px;
+    position: relative;
 }
 
 .program-container h2{
     position: absolute;
-    font-size: 30px;
-    left: 25%;
-    top: 59%;
+    font-size: 40px;
+    left: 9%;
+    top: 1%;
 }
 
 .programjazz{
@@ -568,13 +569,13 @@ section.program-container{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 8%;
-    font-size: 18px;
+    width: 10%;
+    font-size: 26px;
     height: 60px;
     font-weight: bold;
     position: absolute;
-    top: 60%;
-    left: 45%;
+    top: 3%;
+    left: 50%;
 }
 
 .programfood{
@@ -582,13 +583,13 @@ section.program-container{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 8%;
-    font-size: 18px;
+    width: 10%;
+    font-size: 26px;
     height: 60px;
     font-weight: bold;
     position: absolute;
-    top: 60%;
-    left: 55%;
+    top: 3%;
+    left: 65%;
 }
 
 .programdance{
@@ -596,13 +597,13 @@ section.program-container{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 8%;
-    font-size: 18px;
+    width: 10%;
+    font-size: 26px;
     height: 60px;
     font-weight: bold;
     position: absolute;
-    top: 60%;
-    left: 65%;
+    top: 3%;
+    left: 80%;
     
 }
 
@@ -611,13 +612,13 @@ section.program-container{
 }
 
 article.lineprogram{
-    width: 60%;
+    width: 85%;
     height: 1px;
-    margin-top: 10%;
-    background: rgb(0, 0, 0);
-    top: 50%;
     position: absolute;
-    left: 20%;
+    background: rgb(0, 0, 0);
+    top: 2%;
+    margin-top: 100px;
+    left: 7%;
 }
 
 .programthursday{
@@ -625,13 +626,13 @@ article.lineprogram{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 10%;
+    width: 18%;
     font-size: 18px;
-    height: 40px;
+    height: 50px;
     font-weight: bold;
     position: absolute;
-    top: 73%;
-    left: 25%; 
+    top: 15%;
+    left: 10%; 
 }
 
 .programfriday{
@@ -639,13 +640,13 @@ article.lineprogram{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 10%;
+    width: 18%;
     font-size: 18px;
-    height: 40px;
+    height: 50px;
     font-weight: bold;
     position: absolute;
-    top: 73%;
-    left: 37%; 
+    top: 15%;
+    left: 30%; 
 }
 
 .programsaturday{
@@ -653,12 +654,12 @@ article.lineprogram{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 10%;
+    width: 18%;
     font-size: 18px;
-    height: 40px;
+    height: 50px;
     font-weight: bold;
     position: absolute;
-    top: 73%;
+    top: 15%;
     left: 50%; 
 }
 
@@ -667,14 +668,58 @@ article.lineprogram{
     border-radius: 10px;
     outline:none;
     border: 2px black solid;
-    width: 10%;
+    width: 18%;
     font-size: 18px;
-    height: 40px;
+    height: 50px;
     font-weight: bold;
     position: absolute;
-    top: 73%;
-    left: 63%; 
+    top: 15%;
+    left: 70%; 
 }
+
+article.allaccesspass3{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    font-size: 20px;
+    left: 9%;
+    
+}
+
+.allaccesspass3 p{
+    margin-top: -20px;
+}
+
+.allaccesspass3 span{
+    float: right;
+    margin-top: -60px;
+    margin-right: 550px;
+}
+
+
+
+.addtoprogram{
+    background-color: #7d5cccd4;
+    border-radius: 10px;
+    outline:none;
+    border: none;
+    width: 15%;
+    font-size: 18px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.allaccesspass3 input[type=submit]:hover{
+    background-color: #BCABFF;
+}
+
+#addtoprogram-allaccess3-jazz{
+    float: right;
+    margin-top: -67px;
+    margin-right: 280px;
+}
+
+
 
 
 
