@@ -1,5 +1,5 @@
 <?php
-require 'Model/User.php';
+require_once 'Model/User.php';
 class UserController extends User{
     public function loginUserContr()
     {

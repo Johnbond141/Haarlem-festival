@@ -1,5 +1,5 @@
 <?php
-
+require_once 'DAL/Db.php';
 class Jazz extends Db
 {
     public function GetDataJazzAgenda($selectedDay){
@@ -7,7 +7,7 @@ class Jazz extends Db
         $result = $conn->query("SELECT * FROM jazz_agenda WHERE Day='$selectedDay' ORDER BY Time");
         return $result;
     }
-    public function GetEditData(){
+    public function GetJazzEditData(){
         $conn = $this->connect();
         $id = $_GET['edit'];
         $result = $conn->query("SELECT * FROM jazz_agenda WHERE performance_Id=$id");
@@ -16,7 +16,7 @@ class Jazz extends Db
     }
     public function DeleteJazzAgenda(){
         $conn = $this->connect();
-        $id = $_GET['delete'];
+        $id = $_POST['id'];
         $conn->query("DELETE FROM jazz_agenda WHERE performance_Id=$id");
 
 
@@ -31,8 +31,10 @@ class Jazz extends Db
         $date = $_POST['date'];
         $day = $_POST['day'];
         $time = $_POST['time'];
+        $seats = $_POST['seats'];
+        $price = $_POST['price'];
 
-        $conn->query("UPDATE jazz_agenda SET Band='$band', Location='$location', Hall='$hall', Date='$date', Day='$day', Time='$time' WHERE performance_Id=$id");
+        $conn->query("UPDATE jazz_agenda SET Band='$band', Location='$location', Hall='$hall', Date='$date', Day='$day', Time='$time', Seats='$seats', Price='$price' WHERE performance_Id=$id");
 
         header("location: jazz-agenda.php");
     }
@@ -44,9 +46,11 @@ class Jazz extends Db
         $date = $_POST['date'];
         $day = $_POST['day'];
         $time = $_POST['time'];
+        $seats = $_POST['seats'];
+        $price = $_POST['price'];
 
-        $conn->query("INSERT INTO jazz_agenda (Band, Location, Hall, Date, Day, Time ) 
-                        VALUES ('$band', '$location', '$hall', '$date', '$day', '$time')");
+        $conn->query("INSERT INTO jazz_agenda (Band, Location, Hall, Date, Day, Time, Seats, Price ) 
+                        VALUES ('$band', '$location', '$hall', '$date', '$day', '$time', '$seats', '$price')");
 
 
         header("location: jazz-agenda.php");

@@ -1,7 +1,6 @@
 <?php
-require 'header.php';
-require 'Controller/JazzController.php';
-require 'functions.php';
+require_once 'header.php';
+require_once 'functions-jazz.php';
 if (!isset($_SESSION["useruid"])){
     header("Location: index.php");
 }
@@ -17,10 +16,10 @@ if (!isset($_SESSION["useruid"])){
 <section class="agenda">
     <article class="title-wrapper">
         <h1>Jazz Agenda</h1>
-        <button name="jazz-thursday">Thursday</button>
-        <button name="jazz-friday">Friday</button>
-        <button name="jazz-saturday">Saturday</button>
-        <button name="jazz-sunday">Sunday</button>
+        <button class="agenda-button" name="jazz-thursday">Thursday</button>
+        <button class="agenda-button" name="jazz-friday">Friday</button>
+        <button class="agenda-button" name="jazz-saturday">Saturday</button>
+        <button class="agenda-button" name="jazz-sunday">Sunday</button>
     </article>
     <?php
     $selectedDay = "Thursday";
@@ -45,29 +44,35 @@ if (!isset($_SESSION["useruid"])){
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Band</th>
+                    <th  class="table-small">Band</th>
                     <th>Location</th>
                     <th>Hall</th>
                     <th>Date</th>
                     <th>Day</th>
                     <th>Time</th>
+                    <th>Seats</th>
+                    <th>Price</th>
                     <th colspan="2"></th>
                 </tr>
                 </thead>
                 <?php
                 while ($row = $result->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo $row['Band']; ?></td>
+                        <td class="table-small"><?php echo $row['Band']; ?></td>
                         <td><?php echo $row['Location']; ?></td>
                         <td><?php echo $row['Hall']; ?></td>
                         <td><?php echo $row['Date']; ?></td>
                         <td><?php echo $row['Day']; ?></td>
                         <td><?php echo $row['Time']; ?></td>
+                        <td><?php echo $row['Seats']; ?></td>
+                        <td><?php echo $row['Price']; ?></td>
                         <td>
                             <a href="jazz-agenda.php?edit=<?php echo $row['performance_Id']; ?>"
                                class="btn btn-info">Edit</a>
-                            <a href="functions.php?delete=<?php echo $row['performance_Id']; ?>"
-                               class="btn btn-danger">Delete</a>
+                            <form action="functions-jazz.php" method="post">
+                                <input type="hidden" style="float: right" name="id" value="<?php echo $row['performance_Id']; ?>">
+                                <button class="btn btn-danger" name="jazz-delete" type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 <?php endwhile;?>
@@ -82,21 +87,25 @@ if (!isset($_SESSION["useruid"])){
         $date = '';
         $day = '';
         $time = '';
+        $seats = '';
+        $price = '';
         if (isset($_GET['edit'])){
-            $row = $jazzContr->jazzAgendaGetEditData();
-            $id = $band = $row['performance_Id'];
+            $row = $jazzContr->jazzAgendaGetEditDataContr();
+            $id = $row['performance_Id'];
             $band = $row['Band'];
             $location = $row['Location'];
             $hall = $row['Hall'];
             $date = $row['Date'];
             $day = $row['Day'];
             $time = $row['Time'];
+            $seats = $row['Seats'];
+            $price = $row['Price'];
             $update = true;
         }
         ?>
         <section class="main" style="margin-top: 0">
             <p class="sign" style="margin-left: 36%">Add/Edit</p>
-            <form class="form1" action="functions.php" method="post">
+            <form class="form1" action="functions-jazz.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input type="text" name="band" align="center" class="un" value="<?php echo $band; ?>" placeholder="band...">
                 <input type="text" name="location" align="center" class="un" value="<?php echo $location; ?>" placeholder="location...">
@@ -104,11 +113,13 @@ if (!isset($_SESSION["useruid"])){
                 <input type="text" name="date" align="center" class="un" value="<?php echo $date; ?>" placeholder="date...">
                 <input type="text" name="day" align="center" class="un" value="<?php echo $day ?>" placeholder="day...">
                 <input type="text" name="time" align="center" class="un" value="<?php echo $time ?>" placeholder="time...">
+                <input type="text" name="seats" align="center" class="un" value="<?php echo $seats ?>" placeholder="seats...">
+                <input type="text" name="price" align="center" class="un" value="<?php echo $price ?>" placeholder="price...">
                 <?php
                 if ($update == true): ?>
-                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="update">Update</button>
+                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-update">Update</button>
                 <?php else: ?>
-                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="save">Save</button>
+                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-save">Save</button>
                 <?php endif;?>
             </form>
         </section>

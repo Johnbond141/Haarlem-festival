@@ -12,7 +12,7 @@ body{
     background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/jazzheader.png");
     background-size: cover;
     width: auto;
-    height: 400px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@ article.title-wrapper{
     font-size: 130%;
 }
 
-.agenda button{
+.agenda-button{
     border-radius: 10px;
     width: 120px;
     height: 30px;
@@ -79,7 +79,7 @@ article.title-wrapper{
     margin-left: 2%;
     border: none;
 }
-.agenda button:hover{
+.agenda-button:hover{
     background-color: #7C6AC3;
     cursor: pointer;
 }

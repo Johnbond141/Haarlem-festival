@@ -272,6 +272,15 @@ form.form1 {
     z-index: 2;
     cursor: pointer;
 }
+.table {
+    font-size: 100%;
+    table-layout: auto;
+    width: 100%;
+}
+.table-small{
+    width: 1%;
+}
+
 
 @media (max-width: 600px) {
     .main {

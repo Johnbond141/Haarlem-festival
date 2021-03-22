@@ -1,6 +1,6 @@
 <?php
-require 'DAL/Db.php';
-require 'View/UserView.php';
+require_once 'DAL/Db.php';
+require_once 'View/UserView.php';
 class User extends Db
 {
     protected function loginUserModel()
