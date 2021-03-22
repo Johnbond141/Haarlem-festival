@@ -504,6 +504,20 @@ img.haarleminfopic2{
     left: 50%;
 }
 
+img.haarleminfopic3{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    border-style: solid;
+    border-color: white;
+    border-radius: 15px;
+    border-width: 8px;
+    top: 60.2%;
+    left: 65%;
+}
+
+/* --- end of haarlem info page --- */
+
 
 
 

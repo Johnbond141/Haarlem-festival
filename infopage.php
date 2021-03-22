@@ -34,7 +34,10 @@
         you can also enjoy a delicious bite to eat in one of the restaurants featured on
         the food page of this website.
         </p>
-    </section>  
+    </section> 
+    <article class="wapenbackground"> 
+    <img class="haarleminfopic3" src="img/haarlemwapen.png" alt="picture of the weapon of haarlem">
+    </article>
     <img class="haarleminfopic1" src="img/haarleminfo1.png" alt="picture of haarlem">
     <img class="haarleminfopic2" src="img/haarleminfo2.png" alt="second picture of haarlem">
 </body>
