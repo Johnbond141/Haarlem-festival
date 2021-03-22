@@ -157,10 +157,6 @@ article.box4{
     margin-left: 40px;
 }
 
-
-  
-  
-
 input.artistinfo{
     background-color: transparent;
     position: absolute;
@@ -394,11 +390,11 @@ article.title-wrapper{
 }
 
 .info-wrapper img{
-    position: absolute;
-    width: 40%;
+    width: 60%;
     height: auto;
-    top: 82%;
-    left: 41%;
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
 }
 
 .agenda h1{
@@ -418,9 +414,9 @@ article.title-wrapper{
 }
 
 section.day-buttons{
-    position: absolute;
-    top: 70%;
+    width: 60%;
     margin-left: 468px;
+    margin-top: -40px;
 }
 
 .agenda h2{
