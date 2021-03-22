@@ -518,6 +518,167 @@ img.haarleminfopic3{
 
 /* --- end of haarlem info page --- */
 
+/* --- start of create a program page --- */
+
+.programheader{
+    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/createProgram.png");
+    background-size: cover;
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 5px;
+    border-color: #9982F6;
+    
+}
+
+.programheader span{
+    margin-left: 90px;
+}
+
+.programheader h1{
+    margin-left: 38%;
+}
+
+.programheader h2{
+    font-size: 16px;
+}
+
+section.program-container{
+    width: 70%;
+    height: 1000px;
+    margin-left: 15%;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.program-container h2{
+    position: absolute;
+    font-size: 30px;
+    left: 25%;
+    top: 59%;
+}
+
+.programjazz{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 8%;
+    font-size: 18px;
+    height: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+}
+
+.programfood{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 8%;
+    font-size: 18px;
+    height: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+}
+
+.programdance{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 8%;
+    font-size: 18px;
+    height: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    
+}
+
+.program-container input[type=submit]:hover{
+    background-color: #7d5cccd4;
+}
+
+article.lineprogram{
+    width: 60%;
+    height: 1px;
+    margin-top: 10%;
+    background: rgb(0, 0, 0);
+    top: 50%;
+    position: absolute;
+    left: 20%;
+}
+
+.programthursday{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 10%;
+    font-size: 18px;
+    height: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 73%;
+    left: 25%; 
+}
+
+.programfriday{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 10%;
+    font-size: 18px;
+    height: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 73%;
+    left: 37%; 
+}
+
+.programsaturday{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 10%;
+    font-size: 18px;
+    height: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 73%;
+    left: 50%; 
+}
+
+.programsunday{
+    background-color: transparent;
+    border-radius: 10px;
+    outline:none;
+    border: 2px black solid;
+    width: 10%;
+    font-size: 18px;
+    height: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 73%;
+    left: 63%; 
+}
+
+
+
+
 
 
 
