@@ -56,6 +56,16 @@
             <form action="" method="post">
                 <input type="submit" value="Add to program" name="addallaccessjazz3" class="addtoprogram" id="addtoprogram-allaccess3-jazz">
             </form>
+            <hr class="dashed">
+        </article>
+        <article class="allaccesspass1">
+            <h3>All Acces Pass</h3>
+            <p>(Thursday)</p>
+            <span>&euro;80</span>
+            <form action="" method="post">
+                <input type="submit" value="Add to program" name="addallaccessjazz1" class="addtoprogram" id="addtoprogram-allaccess3-jazz">
+            </form>
+            <hr class="dashed">
         </article>
 
     </section>

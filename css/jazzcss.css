@@ -540,7 +540,6 @@ img.haarleminfopic3{
 }
 
 .programheader h1{
-    margin-left: 770px;
 }
 
 .programheader h2{
@@ -717,6 +716,36 @@ article.allaccesspass3{
     float: right;
     margin-top: -67px;
     margin-right: 280px;
+}
+
+hr.dashed {
+    border:none;
+    border-top:2px dashed rgb(0, 0, 0);
+    color:#fff;
+    background-color:#fff;
+    height:1px;
+    width:85%;
+    margin-right: 200px;
+    margin-left: -20px;
+  }
+
+article.allaccesspass1{
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    font-size: 20px;
+    left: 9%;
+    
+}
+
+.allaccesspass1 p{
+    margin-top: -20px;
+}
+
+.allaccesspass1 span{
+    float: right;
+    margin-top: -60px;
+    margin-right: 550px;
 }
 
 
