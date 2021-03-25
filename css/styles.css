@@ -645,6 +645,7 @@ h4.RestaurantInfoText
   background-color: white;
   border: 1px solid rgb(122, 122, 122);
   margin-right: 1%;
+  margin-bottom: 2%;
 }
 .btnReserveren:hover
 {
@@ -655,6 +656,7 @@ h4.RestaurantInfoText
   background-color: white;
   width: 30%;
   border: 1px solid rgb(122, 122, 122);
+  margin-bottom: 2%;
 }
 
 .btnMeerinfo:hover
@@ -684,16 +686,18 @@ h4.RestaurantInfoText
   }
 
   .btnReserveren
-{
+  {
 
-  background-color: white;
-  width: 50%;
-}
-.btnMeerinfo
-{
-  background-color: white;
-  width: 50%;
-}
+    background-color: white;
+    width: 50%;
+    margin-bottom: 2%;
+  }
+  .btnMeerinfo
+  {
+    background-color: white;
+    width: 50%;
+    margin-bottom: 2%;
+  }
 }
 
 .filterBar
