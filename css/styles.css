@@ -742,6 +742,7 @@ h1.foodFilterButton
   background-color: white;
   width: 50%;
   float: left;
+  margin-top: 1%;
 }
 
 .klantInfoForm
@@ -749,6 +750,7 @@ h1.foodFilterButton
   background-color: #9982F6;
   margin: 2%;
   padding-left: 10%;
+  font-size: 20px;
 }
 
 .betaalmethodeInfo
@@ -756,29 +758,33 @@ h1.foodFilterButton
   background-color: white;
   margin-right: 20%;
   padding-bottom: 1%;
+  padding-left: 2%;
 }
 
 .betaalmethode
 {
   background-color: #9982F6;
-  margin: 2%;
   padding-left: 5%;
   padding-bottom: 2%;
+  font-size: 20px;
 }
 
 .bankOpties
 {
   background-color: white;
   margin-right: 20%;
-  padding-left: 5%;
+  padding-left: 2%;
+  padding-bottom: 1%;
 }
 
 .kiesBank
 {
   background-color: #9982F6;
-  margin: 2%;
-  padding-left: 5%;
+  margin-right: 2%;
+  padding-left: 2%;
   padding-bottom: 2%;
+  margin-bottom: 2%;
+  font-size: 20px;
 }
 
 .infopageRSide
@@ -786,4 +792,88 @@ h1.foodFilterButton
   width: 35%;
   float: left;
 }
+
+.bankDropdown
+{
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  font-size: 20px;
+}
+
+.customerCountry
+{
+  width: 50%;
+  float: left;
+  padding-bottom: 2%;
+}
+
+.customerCity
+{
+  width: 50%;
+  float: right;
+  padding-bottom: 2%;
+}
+
+.customerStreet
+{
+  width: 50%;
+  float: left;
+  padding-bottom: 2%;
+}
+
+.customerHNumber
+{
+  width: 50%;
+  float: right;
+  padding-bottom: 2%;
+}
+
+.customerPhone
+{
+  width: 50%;
+  padding-bottom: 15%;
+  padding-bottom: 10%;
+}
+
+.customerEmail
+{
+  padding-bottom: 2%;
+}
+
+.customerName
+{
+  padding-bottom: 2%;
+}
+
+.inputHalf
+{
+  width: 50%;
+  font-size: 18px;
+}
+
+.inputHeel
+{
+  width: 75%;
+  font-size: 18px;
+}
+
+.checkoutButton-
+{
+  width: 50%;
+  font-size: 25px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  background-color: #9982F6;
+  margin-top: 7%;
+  border-radius: 8px;
+}
+
+.checkoutButton:hover
+{
+  background-color: #876bf7;
+}
+
 /* --------- End Payment info page --------- */

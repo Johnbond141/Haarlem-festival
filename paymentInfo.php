@@ -9,28 +9,41 @@
 		</section>
 
 		<header class="indexHeader">
-		<h1 class="indexTitle">Food Event</h1>
-		<h2 class="indexSlogan">Good food is all you need</h2>
+		<h1 class="indexTitle">Shopping <br> Cart</h1>
 		</header>
 
 
         <section class="klantInfo">
             <h3>Customer details</h3>
             <form class=klantInfoForm>
-                <label for="klantEmail">Email adress:</label><br>
-                <input type="text" id="klantEmail" name="klantEmail"><br>
-                <label for="klantNaam">Full name:</label><br>
-                <input type="text" id="klantNaam" name="klantNaam"><br>
-                <label for="klantLand">Country:</label><br>
-                <input type="text" id="klantLand" name="klantLand"><br>
-                <label for="klantStad">City:</label><br>
-                <input type="text" id="klantStad" name="klantStad"><br>
-                <label for="klantStraat">Street:</label><br>
-                <input type="text" id="klantStraat" name="klantStraat"><br>
-                <label for="klantHuisnummer">House number:</label><br>
-                <input type="text" id="klantHuisnummer" name="klantHuisnummer"><br>
-                <label for="klantTelefoonnmr">*Phone number:</label><br>
-                <input type="text" id="klantTelefoonnmr" name="klantTelefoonnmr"><br>
+                <section class= "customerEmail">
+                    <label for="klantEmail">Email adress:</label><br>
+                    <input class= "inputHeel" type="text" id="klantEmail" name="klantEmail"><br>
+                </section>
+                <section class= "customerName">
+                    <label for="klantNaam">Full name:</label><br>
+                    <input class= "inputHeel" type="text" id="klantNaam" name="klantNaam"><br>
+                </section>
+                <section class= "customerCountry">
+                    <label for="klantLand">Country:</label><br>
+                    <input class= "inputHalf" type="text" id="klantLand" name="klantLand"><br>
+                </section>
+                <section class= "customerCity">
+                    <label for="klantStad">City:</label><br>
+                    <input class= "inputHalf" type="text" id="klantStad" name="klantStad"><br>
+                </section>
+                <section class= "customerStreet">
+                    <label for="klantStraat">Street:</label><br>
+                    <input class= "inputHalf" type="text" id="klantStraat" name="klantStraat"><br>
+                </section>
+                <section class= "customerHNumber">
+                    <label for="klantHuisnummer">House number:</label><br>
+                    <input class= "inputHalf" type="text" id="klantHuisnummer" name="klantHuisnummer"><br>
+                </section>
+                <section class= "customerPhone">
+                    <label for="klantTelefoonnmr">*Phone number:</label><br>
+                    <input class= "inputHalf" type="text" id="klantTelefoonnmr" name="klantTelefoonnmr"><br>
+                </section>
             </form>
         </section>
 
@@ -50,7 +63,7 @@
             <section class="bankOpties">
                 <h3>Choose your Bank</h3>
                 <form class="kiesBank">
-                        <select id="bankDropdown" name="banken">
+                        <select class= "bankDropdown" id="bankDropdown" name="banken">
                             <option value="ABN-Amro">ABN-Amro</option>
                             <option value="ASN">ASN</option>
                             <option value="Bunq">Bunq</option>
@@ -61,6 +74,10 @@
                         </select>
                 </form>
             </section>
+            <section class= "betaalButton">
+                <button class= "checkoutButton "type="button" >Checkout</button>
+            </section>
+
         </section>
 	</body>
 </html>
