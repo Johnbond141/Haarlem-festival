@@ -46,6 +46,7 @@ class User extends Db
             session_start();
             $_SESSION["userid"] = $uidExists["usersId"];
             $_SESSION["useruid"] = $uidExists["usersUid"];
+            $_SESSION["userRole"] = $uidExists["usersRole"];
             header("location: dashboard.php");
             exit();
         }
@@ -189,5 +190,118 @@ class User extends Db
                 }
             }
         }
+    }
+    protected function getAllUsers($selected){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM users WHERE usersRole$selected ORDER BY usersRegistration");
+        return $result;
+    }
+    protected function getUserEditData(){
+        $conn = $this->connect();
+        $id = $_GET['editUser'];
+        $result = $conn->query("SELECT * FROM users WHERE usersId=$id");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    protected function userUpdate(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $result = $conn->query("SELECT usersRole FROM users where usersId=$id");
+        $row = mysqli_fetch_assoc($result);
+        $role = $row['usersRole'];
+        $currentRole = $_POST['currentRole'];
+        $fullName = $_POST['fullName'];
+        $email = $_POST['e-mail'];
+        $username = $_POST['username'];
+        if ($currentRole===1){
+            $role = '';
+            $role = $_POST['role'];
+        }
+        $conn->query("UPDATE users SET usersName='$fullName', usersEmail='$email', usersUid='$username', usersRole=$role WHERE usersId=$id") or die("Query failed: " . mysqli_connect_error());
+
+        header("location: manage-users.php");
+    }
+    protected function userDelete(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $conn->query("DELETE FROM users WHERE usersId=$id");
+
+
+        header("location: manage-users.php");
+    }
+    protected function userAdd(){
+        $conn = $this->connect();
+        $name = $_POST["fullName"];
+        $email = $_POST["e-mail"];
+        $username = $_POST["username"];
+        $pwd = $_POST["password"];
+        $pwdRepeat = $_POST["passwordRepeat"];
+        $role = 3;
+        $role = $_POST["role"];
+
+        //Check for empty input
+        if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)){
+            header("location: manage-users.php?error=emptyinput");
+            exit();
+        }
+        //Check if the username is valid
+        if (!preg_match("/^[a-zA-Z0-9]*$/", $username))
+        {
+            header("location: manage-users?error=invaliduid");
+            exit();
+        }
+        //Check if the email is valid
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            header("location: manage-users?error=invalidemail");
+            exit();
+        }
+        //Check if the password has been typed in correctly
+        if ($pwd !== $pwdRepeat)
+        {
+            header("location: manage-users?error=passwordsdontmatch");
+            exit();
+        }
+        //Check if the username has already been used
+        $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql))
+        {
+            header("location: manage-users?error=stmtfailed");
+        }
+        mysqli_stmt_bind_param($stmt, "ss", $username, $username);
+        mysqli_stmt_execute($stmt);
+
+        $resultData = mysqli_stmt_get_result($stmt);
+
+        if ($row = mysqli_fetch_assoc($resultData))
+        {
+            header("location: manage-users?error=usernametaken");
+            exit();
+        }
+
+        mysqli_stmt_close($stmt);
+        //Check if the input is to long for security reasons
+        if (strlen($name) > 35 || strlen($email) > 35 || strlen($username) > 35 || strlen($pwd) > 35 || strlen($pwdRepeat) > 35) {
+            header("location: manage-users?error=inputtolong");
+            exit();
+        }
+        //If everything is correct, make the account and automatically save the registration date
+        $registrationDate = date("Y-m-d");
+        $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd, usersRegistration, usersRole) VALUES (?, ?, ?, ?, ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (mysqli_stmt_prepare($stmt, $sql))
+        {
+            header("location: manage-users?error=stmtfailed");
+        }
+        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+
+
+
+        mysqli_stmt_bind_param($stmt, "ssssss", $name, $email, $username, $hashedPwd, $registrationDate, $role);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        header("location: manage-users?error=none");
+        exit();
     }
 }

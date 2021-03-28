@@ -27,4 +27,21 @@ class UserController extends User{
             header("location: index.php");
         }
     }
+    public function getAllUsersContr($selected){
+        $result = $this->getAllUsers($selected);
+        return $result;
+    }
+    public function getUserEditDataContr(){
+        $row = $this->getUserEditData();
+        return $row;
+    }
+    public function userUpdateContr(){
+        $this->userUpdate();
+    }
+    public function userDeleteContr(){
+        $this->userDelete();
+    }
+    public function userAddContr(){
+        $this->userAdd();
+    }
 }
