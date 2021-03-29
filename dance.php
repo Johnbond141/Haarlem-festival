@@ -15,5 +15,15 @@
       <h2 class="indexSlogan">BOOK YOUR TICKETS NOW....</h2>
     </header>
 
+    <section id="midsection">
+
+    </section>
+
   </body>
 </html>
+
+<?php
+
+  include_once "footer.php";
+
+?>
