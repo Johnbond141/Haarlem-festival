@@ -304,4 +304,38 @@ class User extends Db
         header("location: manage-users?error=none");
         exit();
     }
+    protected function userAddImage(){
+        $conn = $this->connect();
+        $statusMsg = '';
+        $backlink = ' <a href="img-library.php">Go back</a>';
+        $targetDir = 'img/';
+        $fileName = basename($_FILES["file"]["name"]);
+        $targetFilePath = $targetDir . $fileName;
+        $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+        if (isset($_POST["uploadImage"]) && !empty($_FILES["file"]["name"])){
+            $allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf');
+            if (!file_exists($targetFilePath)){
+                if (in_array($fileType, $allowTypes)) {
+                    if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+                        $insert = $conn->query("INSERT into images(file_name, uploaded_on) VALUES ('". $fileName ."', NOW())");
+                        if ($insert) {
+                            header("Location: img-library.php");
+                        } else {
+                            $statusMsg = 'File upload failed, please try again!' .$backlink;
+                        }
+                    } else {
+                        $statusMsg = 'Sorry, there was an error uploading your file' .$backlink;
+                    }
+                } else {
+                    $statusMsg = 'Sorry only JPG, JPEG, GIF & PDF files are allowed to upload' .$backlink;
+                }
+            } else {
+                $statusMsg = 'That file already exists, please try another file!' .$backlink;
+            }
+        } else {
+            $statusMsg = 'Please select a file to upload!' .$backlink;
+        }
+        echo $statusMsg;
+    }
 }

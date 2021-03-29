@@ -11,3 +11,6 @@ if (isset($_POST['deleteUser'])){
 if (isset($_POST['saveUser'])){
     $userContr->userAddContr();
 }
+if (isset($_POST['uploadImage'])){
+    $userContr->userAddImageContr();
+}
