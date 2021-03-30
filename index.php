@@ -50,8 +50,8 @@
 
           <article class="backgroundEvent3">
             <article class="imageZoom">
-              <img src="img/dance1.jpg">
-              <article class="bottom-left">Dance</article>
+                <a href="dance.php"><img src="img/dance1.jpg"></a>
+            <article class="bottom-left">Dance</article>
             </article>
           </article>
 

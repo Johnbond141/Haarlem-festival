@@ -276,7 +276,7 @@ h2.indexSlogan{
   overflow: hidden;
   width: 92%;
   height: 92%;
-  margin-top: 2.8%;
+  margin-top: 4.2%;
   margin-left: 3.9%;
   border: none;
   outline: none;
@@ -375,15 +375,6 @@ h2.indexSlogan{
   margin-left: 81.5%;
 }
 
-.backgroundEvent3 {
-  position: absolute;
-  background-color: white;
-  width: 23%;
-  height: 20%;
-  margin-top: 1%;
-  margin-left: 61.8%;
-}
-
 .partnerImages {
   position: relative;
   overflow: hidden;
@@ -406,18 +397,19 @@ h2.indexSlogan{
 /* --------- Footer --------- */
 
 
-section.wrapperfooter{
+section.wrapperfooter {
     width: 100%;
     height: 280px;
     background-color: #9982F6;
+    top: 150%;
     display: flex;
     justify-content: center;
     clear: both;
-    position: absolute;
+    position: relative;
     margin-top: 100px;
 }
 
-article.copyright{
+article.copyright {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -425,13 +417,13 @@ article.copyright{
     position: absolute;
 }
 
-.copyrightlogos img{
+.copyrightlogos img {
     margin-left: 7px;
     width: 19%;
     height: auto;
 }
 
-img.logofooter{
+img.logofooter {
     width: 8%;
     height: auto;
     position: absolute;
@@ -439,7 +431,7 @@ img.logofooter{
     top: 10%;
 }
 
-article.linefooter{
+article.linefooter {
     width: 90%;
     height: 1px;
     position: absolute;
@@ -447,7 +439,7 @@ article.linefooter{
     top: 65%;
 }
 
-.footermenu{
+.footermenu {
     position: absolute;
     top: 20%;
     left: 20%;
@@ -455,7 +447,7 @@ article.linefooter{
     flex-flow: row;
 }
 
-.menutag{
+.menutag {
     position: absolute;
     top: 3%;
     left: 20%;
@@ -463,38 +455,38 @@ article.linefooter{
     text-shadow: 2px 2px 2px black;
 }
 
-.wrapperfooter a{
+.wrapperfooter a {
     color: white;
     text-shadow: 2px 2px 2px black;
     text-decoration: none;
 }
 
-.footermenu ul{
+.footermenu ul {
     width: 30%;
     color: white;
     font-weight: bold;
     text-shadow: 2px 2px 2px black;
 }
 
-.footermenu ul.section1{
+.footermenu ul.section1 {
     margin-right: 20px;
 }
 
-.footermenu ul.section2{
+.footermenu ul.section2 {
     margin-right: 20px;
 }
 
-.footermenu ul{
+.footermenu ul {
     margin: 0;
     padding: 0;
 }
 
-.footermenu li{
+.footermenu li {
     list-style-type: none;
     margin-bottom: 10px;
 }
 
-.latestposttag{
+.latestposttag {
     position: absolute;
     top: 3%;
     left: 45%;
@@ -502,7 +494,7 @@ article.linefooter{
     text-shadow: 2px 2px 2px black;
 }
 
-.latestposts{
+.latestposts {
     position: absolute;
     top: 20%;
     left: 45%;
@@ -513,25 +505,25 @@ article.linefooter{
     text-shadow: 2px 2px 2px black;
 }
 
-.latestposts .insta img{
+.latestposts .insta img {
     height: auto;
     float: left;
     margin-right: 13px;
 }
 
-.latestposts p{
+.latestposts p {
     margin-left: 15px;
     display: block;
     margin: 2px 0 0 0;
 }
 
-.facebook{
+.facebook {
     position: absolute;
     top: 130%;
     left: 0%;
 }
 
-.facebook p{
+.facebook p {
     position: absolute;
     width: 1000%;
     top: 0%;
@@ -543,7 +535,7 @@ article.linefooter{
     font-size: 14px;
 }
 
-.stayconnectedtag{
+.stayconnectedtag {
     position: absolute;
     top: 3%;
     left: 70%;
@@ -551,14 +543,14 @@ article.linefooter{
     text-shadow: 2px 2px 2px black;
 }
 
-.stayconnected{
+.stayconnected {
     position: absolute;
     width: 11%;
     top: 20%;
     left: 70%;
 }
 
-.stayconnected .email{
+.stayconnected .email {
     outline: none;
     border: none;
     background-color: #FFFFFF;
@@ -566,7 +558,7 @@ article.linefooter{
     height: 20px;
 }
 
-.stayconnected .signup{
+.stayconnected .signup {
     float: right;
     margin-top: 20px;
     background-color: #CD5F47;
@@ -581,3 +573,189 @@ article.linefooter{
 /* --------- Footer End --------- */
 
 /* ----------------------- Index End ----------------------- */
+
+/* ----------------------- Dance ----------------------- */
+
+/* --------- Body --------- */
+
+.dance{
+    background: #ECECEC;
+}
+
+#danceSection {
+    /* background: blue; */
+    width: 100%;
+    height: 161%;
+    position: absolute;
+}
+
+.artistInfo {
+  /* background: purple; */
+  height: 48%;
+  width: 100%;
+}
+
+/* --------- Body End --------- */
+
+/* --------- Line Up --------- */
+
+.leftContainer {
+    /* background: green; */
+    width: 50%;
+    height: 38%;
+    position: absolute;
+}
+
+.leftContainer p {
+  color: white;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  margin: auto;
+  padding-top: 2%;
+  font-size: 40px;
+}
+
+.artistHovers {
+  width: 85%;
+  height: 80%;
+  margin-left: 7.7%;
+}
+
+.artistBackground1 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 1%;
+}
+
+.artistBackground2 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 1%;
+  margin-left: 30.5%;
+}
+
+.artistBackground3 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 1%;
+  margin-left: 61.8%;
+}
+
+.artistBackground4 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 28%;
+}
+
+.artistBackground5 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 28%;
+  margin-left: 30.5%;
+}
+
+.artistBackground6 {
+  position: absolute;
+  background-color: white;
+  height: 40%;
+  margin-top: 28%;
+  margin-left: 61.8%;
+}
+
+.imageZoomArtist {
+  position: relative;
+  overflow: hidden;
+  width: 92%;
+  height: 92%;
+  margin-top: 4.5%;
+  margin-left: 3.9%;
+  border: none;
+  outline: none;
+}
+
+.imageZoomArtist img {
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+
+.imageZoomArtist:hover img {
+  transform: scale(1.1);
+}
+
+/* --------- Line Up End --------- */
+
+/* --------- Program --------- */
+
+.rightContainer {
+    /* background: red; */
+    width: 50%;
+    height: 99%;
+    float: right;
+}
+
+.rightContainer p {
+  color: white;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  margin: auto;
+  padding-top: 2%;
+  font-size: 40px;
+}
+
+#artistProgram {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+#artistProgram td, #artistProgram th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#artistProgram tr:nth-child(even){background-color: #f2f2f2;}
+
+#artistProgram tr:hover {background-color: #ddd;}
+
+#artistProgram th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #7d5cccd4;
+  color: white;
+}
+
+/* --------- Program End --------- */
+
+/* --------- Tickets --------- */
+
+.danceTickets {
+    background: white;
+    width: 96%;
+    height: 50%;
+    margin-left: 2%;
+    border-radius: 15px;
+    border-style: solid;
+    position: absolute;
+}
+
+.danceTickets p {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  padding-top: 1%;
+  font-size: 40px;
+}
+
+/* --------- Tickets End --------- */
