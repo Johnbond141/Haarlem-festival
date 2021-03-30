@@ -40,7 +40,9 @@ if (!isset($_SESSION["useruid"])){
                 <h3 class="dashboardButtonText">Export Data</h3>
             </section>
             <section class="column">
-                <h3 class="dashboardButtonText">Upload Images</h3>
+                <a href="img-library.php" style="text-decoration: none;">
+                    <h3 class="dashboardButtonText">Upload images</h3>
+                </a>
             </section>
         </section>
     </section>
