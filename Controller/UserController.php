@@ -47,4 +47,7 @@ class UserController extends User{
     public function userAddImageContr(){
         $this->userAddImage();
     }
+    public function userDeleteImageContr(){
+        $this->userDeleteImage();
+    }
 }

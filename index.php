@@ -22,10 +22,7 @@ require_once 'header.php';
             $userObj2->showLogin();
             ?>
         </section>
-
-
     </section>
-
 </section>
 
 </html>

@@ -72,10 +72,10 @@ if (!isset($_SESSION["useruid"])){
                             <td><?php echo $row['usersRegistration']; ?></td>
                             <td>
                                 <a href="manage-users.php?editUser=<?php echo $row['usersId']; ?>"
-                                   class="btn btn-info">Edit</a>
-                                <form action="functions-user.php" method="post">
-                                    <input type="hidden" style="float: right" name="id" value="<?php echo $row['usersId']; ?>">
-                                    <button class="btn btn-danger" name="deleteUser" type="submit">Delete</button>
+                                   class="btn btn-info btn-sm">Edit</a>
+                                <form action="functions-user.php" method="post" style="display: inline">
+                                    <input type="hidden" name="id" value="<?php echo $row['usersId']; ?>">
+                                    <button class="btn btn-danger btn-sm" name="deleteUser" type="submit">Delete</button>
                                 </form>
                             </td>
                         </tr>

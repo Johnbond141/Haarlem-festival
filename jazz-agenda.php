@@ -44,7 +44,7 @@ if (!isset($_SESSION["useruid"])){
             <table class="table">
                 <thead>
                 <tr>
-                    <th  class="table-small">Band</th>
+                    <th class="table-small">Band</th>
                     <th>Location</th>
                     <th>Hall</th>
                     <th>Date</th>
@@ -68,10 +68,10 @@ if (!isset($_SESSION["useruid"])){
                         <td><?php echo $row['Price']; ?></td>
                         <td>
                             <a href="jazz-agenda.php?edit=<?php echo $row['performance_Id']; ?>"
-                               class="btn btn-info">Edit</a>
-                            <form action="functions-jazz.php" method="post">
-                                <input type="hidden" style="float: right" name="id" value="<?php echo $row['performance_Id']; ?>">
-                                <button class="btn btn-danger" name="jazz-delete" type="submit">Delete</button>
+                               class="btn btn-info btn-sm">Edit</a>
+                            <form action="functions-jazz.php" method="post" style="display: inline">
+                                <input type="hidden" name="id" value="<?php echo $row['performance_Id']; ?>">
+                                <button class="btn btn-danger btn-sm" name="jazz-delete" type="submit">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -103,23 +103,27 @@ if (!isset($_SESSION["useruid"])){
             $update = true;
         }
         ?>
-        <section class="main" style="margin-top: 0">
-            <p class="sign" style="margin-left: 36%">Add/Edit</p>
-            <form class="form1" action="functions-jazz.php" method="post">
+        <section class="main" style="margin-top: 0; width: 80%;">
+            <p class="sign" style="margin-left: 42%">Add/Edit</p>
+            <form class="form1" action="functions-jazz.php" method="post" ">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <section style="display: inline-block; width: 45%; margin-left: 2.5%;">
                 <input type="text" name="band" align="center" class="un" value="<?php echo $band; ?>" placeholder="band...">
                 <input type="text" name="location" align="center" class="un" value="<?php echo $location; ?>" placeholder="location...">
                 <input type="text" name="hall" align="center" class="un" value="<?php echo $hall; ?>" placeholder="hall...">
                 <input type="text" name="date" align="center" class="un" value="<?php echo $date; ?>" placeholder="date...">
+                </section>
+                <section style="display: inline-block; width: 45%;">
                 <input type="text" name="day" align="center" class="un" value="<?php echo $day ?>" placeholder="day...">
                 <input type="text" name="time" align="center" class="un" value="<?php echo $time ?>" placeholder="time...">
                 <input type="text" name="seats" align="center" class="un" value="<?php echo $seats ?>" placeholder="seats...">
                 <input type="text" name="price" align="center" class="un" value="<?php echo $price ?>" placeholder="price...">
+                </section>
                 <?php
                 if ($update == true): ?>
-                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-update">Update</button>
+                    <button type="submit" style="margin-left: 40%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-update">Update</button>
                 <?php else: ?>
-                    <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-save">Save</button>
+                    <button type="submit" style="margin-left: 41%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="jazz-save">Save</button>
                 <?php endif;?>
             </form>
         </section>

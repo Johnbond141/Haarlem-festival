@@ -31,8 +31,8 @@ if (!isset($_SESSION["useruid"])){
                         <th>Stars</th>
                         <th>Seats</th>
                         <th>Price</th>
-                        <th>Reduced(-12)</th>
-                        <th>Type</th>
+                        <th class="table-small">Reduced (-12)</th>
+                        <th class="table-small">Type</th>
                         <th class="table-small" colspan="2"></th>
                     </tr>
                     </thead>
@@ -47,14 +47,14 @@ if (!isset($_SESSION["useruid"])){
                             <td><?php echo $row['Stars']; ?></td>
                             <td><?php echo $row['Seats']; ?></td>
                             <td><?php echo $row['Price']; ?></td>
-                            <td><?php echo $row['ReducedPrice']; ?></td>
+                            <td class="table-small"><?php echo $row['ReducedPrice']; ?></td>
                             <td class="table-small"><?php echo $row['Type']; ?></td>
                             <td>
                                 <a href="food-agenda.php?edit=<?php echo $row['restaurant_Id']; ?>"
-                                   class="btn btn-info">Edit</a>
-                                <form action="functions-food.php" method="post">
+                                   class="btn btn-info btn-sm" style="margin-bottom: 5px">Edit</a>
+                                <form action="functions-food.php" method="post" style="display: inline">
                                     <input type="hidden" name="id" value="<?php echo $row['restaurant_Id']; ?>">
-                                    <button class="btn btn-danger" name="food-delete" type="submit">Delete</button>
+                                    <button class="btn btn-danger btn-sm" name="food-delete" type="submit">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -90,25 +90,29 @@ if (!isset($_SESSION["useruid"])){
                 $update = true;
             }
             ?>
-            <section class="main" style="margin-top: 0">
-                <p class="sign" style="margin-left: 36%">Add/Edit</p>
+            <section class="main" style="margin-top: 0;  width: 80%;">
+                <p class="sign" style="margin-left: 42%">Add/Edit</p>
                 <form class="form1" action="functions-food.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <section style="display: inline-block; width: 45%; margin-left: 2.5%;">
                     <input type="text" name="restaurant" align="center" class="un" value="<?php echo $restaurant; ?>" placeholder="Restaurant...">
                     <input type="text" name="address" align="center" class="un" value="<?php echo $address; ?>" placeholder="Address...">
                     <input type="text" name="sessions" align="center" class="un" value="<?php echo $sessions; ?>" placeholder="Sessions...">
                     <input type="text" name="duration" align="center" class="un" value="<?php echo $duration; ?>" placeholder="Duration/h...">
                     <input type="text" name="firstSession" align="center" class="un" value="<?php echo $firstSession ?>" placeholder="First session...">
+                    </section>
+                    <section style="display: inline-block; width: 45%;">
                     <input type="text" name="stars" align="center" class="un" value="<?php echo $stars ?>" placeholder="Stars...">
                     <input type="text" name="seats" align="center" class="un" value="<?php echo $seats ?>" placeholder="Seats...">
                     <input type="text" name="price" align="center" class="un" value="<?php echo $price ?>" placeholder="Price...">
                     <input type="text" name="reducedPrice" align="center" class="un" value="<?php echo $reducedPrice ?>" placeholder="Reduced (-12)...">
                     <input type="text" name="type" align="center" class="un" value="<?php echo $type ?>" placeholder="Type...">
+                    </section>
                     <?php
                     if ($update == true): ?>
-                        <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="food-update">Update</button>
+                        <button type="submit" style="margin-left: 40%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="food-update">Update</button>
                     <?php else: ?>
-                        <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="food-save">Save</button>
+                        <button type="submit" style="margin-left: 41%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="food-save">Save</button>
                     <?php endif;?>
                 </form>
             </section>

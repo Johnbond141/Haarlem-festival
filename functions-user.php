@@ -14,3 +14,7 @@ if (isset($_POST['saveUser'])){
 if (isset($_POST['uploadImage'])){
     $userContr->userAddImageContr();
 }
+if (isset($_POST['deleteImage'])){
+    $userContr->userDeleteImageContr();
+}
+

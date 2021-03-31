@@ -47,14 +47,15 @@ h2.slogan{
 section.agenda{
     background-color: #9982F6;
     width: 1000px;
-    height: 1077px;
+    height: auto;
     display: flex;
     border-style: solid;
     border-width: 20px;
     border-top-width: 80px;
     border-color: white;
-    margin: auto;
-    margin-top: 60px;
+    padding-bottom: 2%;
+    margin: 60px auto auto;
+    margin-bottom: 50%;
     flex-flow: column;
 }
 

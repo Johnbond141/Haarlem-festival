@@ -65,10 +65,10 @@ if (!isset($_SESSION["useruid"])){
                             <td><?php echo $row['Price']; ?></td>
                             <td>
                                 <a href="dance-agenda.php?edit=<?php echo $row['performance_Id']; ?>"
-                                   class="btn btn-info">Edit</a>
-                                <form action="functions-dance.php" method="post">
+                                   class="btn btn-info btn-sm">Edit</a>
+                                <form action="functions-dance.php " method="post" style="display: inline">
                                     <input type="hidden" name="id" value="<?php echo $row['performance_Id']; ?>">
-                                    <button class="btn btn-danger" name="dance-delete" type="submit">Delete</button>
+                                    <button class="btn btn-danger btn-sm" name="dance-delete" type="submit">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -102,24 +102,28 @@ if (!isset($_SESSION["useruid"])){
                 $update = true;
             }
             ?>
-            <section class="main" style="margin-top: 0">
-                <p class="sign" style="margin-left: 36%">Add/Edit</p>
+            <section class="main" style="margin-top: 0;  width: 80%;">
+                <p class="sign" style="margin-left: 42%">Add/Edit</p>
                 <form class="form1" action="functions-dance.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <section style="display: inline-block; width: 45%; margin-left: 2.5%;">
                     <input type="text" name="artist" align="center" class="un" value="<?php echo $artist; ?>" placeholder="artist...">
                     <input type="text" name="venue" align="center" class="un" value="<?php echo $venue; ?>" placeholder="venue...">
                     <input type="text" name="session" align="center" class="un" value="<?php echo $session; ?>" placeholder="session...">
                     <input type="text" name="date" align="center" class="un" value="<?php echo $date; ?>" placeholder="date...">
                     <input type="text" name="day" align="center" class="un" value="<?php echo $day ?>" placeholder="day...">
+                    </section>
+                    <section style="display: inline-block; width: 45%;">
                     <input type="text" name="time" align="center" class="un" value="<?php echo $time ?>" placeholder="time...">
                     <input type="text" name="duration" align="center" class="un" value="<?php echo $duration ?>" placeholder="duration...">
                     <input type="text" name="tickets" align="center" class="un" value="<?php echo $tickets ?>" placeholder="tickets...">
                     <input type="text" name="price" align="center" class="un" value="<?php echo $price ?>" placeholder="price...">
+                    </section>
                     <?php
                     if ($update == true): ?>
-                        <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="dance-update">Update</button>
+                        <button type="submit" style="margin-left: 40%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="dance-update">Update</button>
                     <?php else: ?>
-                        <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="dance-save">Save</button>
+                        <button type="submit" style="margin-left: 41%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="dance-save">Save</button>
                     <?php endif;?>
                 </form>
             </section>

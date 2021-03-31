@@ -15,8 +15,35 @@ require_once 'functions-user.php';
     </article>
     <section class="container">
         <section class="row justify-content-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Image name</th>
+                        <th colspan="1"></th>
+                    </tr>
+                </thead>
+            <?php
+                $directory = 'img';
+                $images = array_diff(scandir($directory), array('..', '.'));
+                foreach ($images as $image) : ?>
+            <tr>
+                <td style="line-height: 10px">
+                    <a style="text-decoration: none; color: black" href="img/<?php echo $image ?>">
+                        <?php echo $image; ?>
+                    </a>
+                </td>
+
+                <td>
+                    <form action="functions-user.php" method="post">
+                        <input type="hidden" style="float: right" name="id" value="<?php echo $image; ?>">
+                        <button class="btn btn-danger btn-sm" name="deleteImage" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <?php endforeach;?>
+            </table>
             <form action="functions-user.php" method="post" enctype="multipart/form-data">
                 Select image file to upload:
-                <input type="file" name="file">
-                <input type="submit" name="uploadImage" value="Upload">
+                <input class="" type="file" name="file">
+                <input class="btn btn-primary" type="submit" name="uploadImage" value="Upload">
             </form>

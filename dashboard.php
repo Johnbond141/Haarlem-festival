@@ -16,7 +16,13 @@ if (!isset($_SESSION["useruid"])){
         <section class="content">
             <p class="event-title">Account details</p>
             <?php echo "<p>Username: " . $_SESSION["useruid"] . "</p>" ?>
-            <p>Role: </p>
+            <?php
+            echo "<p>Role: ";
+            if ($_SESSION["userRole"]===1){
+                    echo "Super Administrator";
+                } elseif ($_SESSION["userRole"]===2){
+                    "Administrator";
+                } "</p>"?>
             <p class="welcometxt">Welcome back! <br><br>You are logged in with an administrator account.
                 This means that you are authorized to support the website.
                 You can do so using the Content Management System.</p>

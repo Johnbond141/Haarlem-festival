@@ -305,7 +305,6 @@ class User extends Db
         exit();
     }
     protected function userAddImage(){
-        $conn = $this->connect();
         $statusMsg = '';
         $backlink = ' <a href="img-library.php">Go back</a>';
         $targetDir = 'img/';
@@ -318,12 +317,7 @@ class User extends Db
             if (!file_exists($targetFilePath)){
                 if (in_array($fileType, $allowTypes)) {
                     if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-                        $insert = $conn->query("INSERT into images(file_name, uploaded_on) VALUES ('". $fileName ."', NOW())");
-                        if ($insert) {
                             header("Location: img-library.php");
-                        } else {
-                            $statusMsg = 'File upload failed, please try again!' .$backlink;
-                        }
                     } else {
                         $statusMsg = 'Sorry, there was an error uploading your file' .$backlink;
                     }
@@ -337,5 +331,11 @@ class User extends Db
             $statusMsg = 'Please select a file to upload!' .$backlink;
         }
         echo $statusMsg;
+    }
+    protected function userDeleteImage(){
+        $image = $_POST["id"];
+        $path = "img/" . $image;
+        unlink($path);
+        header("Location: img-library.php");
     }
 }
