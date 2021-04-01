@@ -34,7 +34,9 @@ if (!isset($_SESSION["useruid"])){
         </section>
         <section class="row">
             <section class="column">
-                <h3 class="dashboardButtonText">Register Payment</h3>
+                <a href="create-payment.php" style="text-decoration: none;">
+                    <h3 class="dashboardButtonText">Register payment</h3>
+                </a>
             </section>
             <section class="column">
                 <h3 class="dashboardButtonText">Export Data</h3>
