@@ -1,8 +1,5 @@
 <?php
 require_once 'header.php';
-if (!isset($_SESSION["useruid"])){
-    header("Location: index.php");
-}
 ?>
 <section class="login">
     <section class="main">
@@ -15,7 +12,7 @@ if (!isset($_SESSION["useruid"])){
         </form>
         <section class="validation">
             <?php
-            if (isset($_POST["submit"])){
+            if (isset($_POST["reset-request-submit"])){
                 $userObj = new UserController();
                 $userObj->resetPasswordRequestContr();
             }

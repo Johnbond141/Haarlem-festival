@@ -1,8 +1,6 @@
 <?php
 require_once 'header.php';
-if (!isset($_SESSION["useruid"])){
-    header("Location: index.php");
-}
+
 ?>
 <section class="login">
     <section class="main">
@@ -25,9 +23,9 @@ if (!isset($_SESSION["useruid"])){
                 <form class="form1" action="create-new-password.php" method="post">
                     <input type="hidden" name="selector" value="<?php echo $selector; ?>">
                     <input type="hidden" name="validator" value="<?php echo $validator; ?>">
-                    <input class="un" type="text" align="center" placeholder="New password" name="pwd">
-                    <input class="un" type="text" align="center" placeholder="Repeat new password" name="pwd-repeat">
-                    <button class="submit" align="center" name="reset-request-submit">Reset</button>
+                    <input class="pass" type="password" align="center" placeholder="New password" name="pwd">
+                    <input class="pass" type="password" align="center" placeholder="Repeat new password" name="pwd-repeat">
+                    <button class="submit" align="center" name="reset-password-submit">Reset</button>
                 </form>
                 <?php
             }

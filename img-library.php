@@ -27,7 +27,7 @@ require_once 'functions-user.php';
                 $images = array_diff(scandir($directory), array('..', '.'));
                 foreach ($images as $image) : ?>
             <tr>
-                <td style="line-height: 10px">
+                <td>
                     <a style="text-decoration: none; color: black" href="img/<?php echo $image ?>">
                         <?php echo $image; ?>
                     </a>
@@ -36,7 +36,7 @@ require_once 'functions-user.php';
                 <td>
                     <form action="functions-user.php" method="post">
                         <input type="hidden" style="float: right" name="id" value="<?php echo $image; ?>">
-                        <button class="btn btn-danger btn-sm" name="deleteImage" type="submit">Delete</button>
+                        <button class="btn btn-danger btn-sm py-0" name="deleteImage" type="submit" style="font-size: 0.8em;">Delete</button>
                     </form>
                 </td>
             </tr>
