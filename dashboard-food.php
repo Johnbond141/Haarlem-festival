@@ -19,7 +19,9 @@ if (!isset($_SESSION["useruid"])){
         </section>
         <section class="row">
             <section class="column">
-                <h3 class="dashboardButtonText">Edit Pages</h3>
+                <a href="food-pages.php" style="text-decoration: none;">
+                    <h3 class="dashboardButtonText">Edit pages</h3>
+                </a>
             </section>
             <section class="column">
                 <a href="food-agenda.php" style="text-decoration: none;">
