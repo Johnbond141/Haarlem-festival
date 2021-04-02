@@ -11,3 +11,12 @@ if (isset($_POST['jazz-save'])){
 if (isset($_POST['jazz-delete'])){
     $jazzContr->jazzAgendaDeleteContr();
 }
+if (isset($_POST['jazz-update-page'])){
+    $jazzContr->jazzPagesUpdateContr();
+}
+if (isset($_POST['jazz-save-page'])){
+    $jazzContr->jazzPagesAddContr();
+}
+if (isset($_POST['jazz-delete-page'])){
+    $jazzContr->jazzPagesDeleteContr();
+}

@@ -12,3 +12,12 @@ if (isset($_POST['food-save'])){
 if (isset($_POST['food-delete'])){
     $foodContr->foodAgendaDeleteContr();
 }
+if (isset($_POST['food-update-page'])){
+    $foodContr->foodPagesUpdateContr();
+}
+if (isset($_POST['food-save-page'])){
+    $foodContr->foodPagesAddContr();
+}
+if (isset($_POST['food-delete-page'])){
+    $foodContr->foodPagesDeleteContr();
+}

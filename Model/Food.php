@@ -59,4 +59,58 @@ class Food extends Db
 
         header("location: food-agenda.php");
     }
+    public function foodPagesGetAll(){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM pages WHERE type='food'");
+        return $result;
+
+    }
+    public function foodPagesGetOne($pageId){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM pages WHERE page_id=$pageId");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    public function GetFoodPageEditData(){
+        $conn = $this->connect();
+        $pageId = $_GET['edit'];
+        $result = $conn->query("SELECT * FROM pages WHERE page_id=$pageId");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    public function UpdateFoodPage(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $title = $_POST['title'];
+        $subtitle = $_POST['subtitle'];
+        $paragraph1 = $_POST['paragraph1'];
+        $paragraph2 = $_POST['paragraph2'];
+        $paragraph3 = $_POST['paragraph3'];
+
+        $conn->query("UPDATE pages SET name='$name', title='$title', subtitle='$subtitle', paragraph1='$paragraph1', paragraph2='$paragraph2', paragraph3='$paragraph3' WHERE page_id=$id");
+
+        header("location: food-pages.php");
+    }
+    public function AddFoodPage(){
+        $conn = $this->connect();
+        $name = $_POST['name'];
+        $title = $_POST['title'];
+        $subtitle = $_POST['subtitle'];
+        $paragraph1 = $_POST['paragraph1'];
+        $paragraph2 = $_POST['paragraph2'];
+        $paragraph3 = $_POST['paragraph3'];
+
+        $conn->query("INSERT INTO pages (name, type, title, subtitle, paragraph1, paragraph2, paragraph3 ) 
+                        VALUES ('$name', 'food', '$title', '$subtitle', '$paragraph1', '$paragraph2', '$paragraph3')");
+
+        header("location: food-pages.php");
+    }
+    public function DeleteFoodPage(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $conn->query("DELETE FROM pages WHERE page_id=$id");
+
+        header("location: food-pages.php");
+    }
 }

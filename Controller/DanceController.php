@@ -20,4 +20,25 @@ class DanceController extends Dance {
     public function danceAgendaDeleteContr(){
         $this->DeleteDanceAgenda();
     }
+    public function dancePagesGetAllContr(){
+        $result = $this->dancePagesGetAll();
+        return $result;
+    }
+    public function dancePagesGetOneContr($pageId){
+        $result = $this->dancePagesGetOne($pageId);
+        return $result;
+    }
+    public function dancePagesGetEditDataContr(){
+        $result = $this->GetDancePageEditData();
+        return $result;
+    }
+    public function dancePagesUpdateContr(){
+        $this->UpdateDancePage();
+    }
+    public function dancePagesAddContr(){
+        $this->AddDancePage();
+    }
+    public function dancePagesDeleteContr(){
+        $this->DeleteDancePage();
+    }
 }

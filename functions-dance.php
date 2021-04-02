@@ -12,3 +12,12 @@ if (isset($_POST['dance-save'])){
 if (isset($_POST['dance-delete'])){
     $danceContr->danceAgendaDeleteContr();
 }
+if (isset($_POST['dance-update-page'])){
+    $danceContr->dancePagesUpdateContr();
+}
+if (isset($_POST['dance-save-page'])){
+    $danceContr->dancePagesAddContr();
+}
+if (isset($_POST['dance-delete-page'])){
+    $danceContr->dancePagesDeleteContr();
+}

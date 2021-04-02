@@ -20,4 +20,25 @@ class JazzController extends Jazz{
     public function jazzAgendaDeleteContr(){
         $this->DeleteJazzAgenda();
     }
+    public function jazzPagesGetAllContr(){
+        $result = $this->jazzPagesGetAll();
+        return $result;
+    }
+    public function jazzPagesGetOneContr($pageId){
+        $result = $this->jazzPagesGetOne($pageId);
+        return $result;
+    }
+    public function jazzPagesGetEditDataContr(){
+        $result = $this->GetJazzPageEditData();
+        return $result;
+    }
+    public function jazzPagesUpdateContr(){
+        $this->UpdateJazzPage();
+    }
+    public function jazzPagesAddContr(){
+        $this->AddJazzPage();
+    }
+    public function jazzPagesDeleteContr(){
+        $this->DeleteJazzPage();
+    }
 }

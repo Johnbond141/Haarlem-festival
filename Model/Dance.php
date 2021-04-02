@@ -57,4 +57,58 @@ class Dance extends Db
 
         header("location: dance-agenda.php");
     }
+    public function dancePagesGetAll(){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM pages WHERE type='dance'");
+        return $result;
+
+    }
+    public function dancePagesGetOne($pageId){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM pages WHERE page_id=$pageId");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    public function GetDancePageEditData(){
+        $conn = $this->connect();
+        $pageId = $_GET['edit'];
+        $result = $conn->query("SELECT * FROM pages WHERE page_id=$pageId");
+        $row = mysqli_fetch_assoc($result);
+        return $row;
+    }
+    public function UpdateDancePage(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $title = $_POST['title'];
+        $subtitle = $_POST['subtitle'];
+        $paragraph1 = $_POST['paragraph1'];
+        $paragraph2 = $_POST['paragraph2'];
+        $paragraph3 = $_POST['paragraph3'];
+
+        $conn->query("UPDATE pages SET name='$name', title='$title', subtitle='$subtitle', paragraph1='$paragraph1', paragraph2='$paragraph2', paragraph3='$paragraph3' WHERE page_id=$id");
+
+        header("location: dance-pages.php");
+    }
+    public function AddDancePage(){
+        $conn = $this->connect();
+        $name = $_POST['name'];
+        $title = $_POST['title'];
+        $subtitle = $_POST['subtitle'];
+        $paragraph1 = $_POST['paragraph1'];
+        $paragraph2 = $_POST['paragraph2'];
+        $paragraph3 = $_POST['paragraph3'];
+
+        $conn->query("INSERT INTO pages (name, type, title, subtitle, paragraph1, paragraph2, paragraph3 ) 
+                        VALUES ('$name', 'dance', '$title', '$subtitle', '$paragraph1', '$paragraph2', '$paragraph3')");
+
+        header("location: dance-pages.php");
+    }
+    public function DeleteDancePage(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $conn->query("DELETE FROM pages WHERE page_id=$id");
+
+        header("location: dance-pages.php");
+    }
 }
