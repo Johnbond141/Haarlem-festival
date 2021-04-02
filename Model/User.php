@@ -213,8 +213,7 @@ class User extends Db
         $fullName = $_POST['fullName'];
         $email = $_POST['e-mail'];
         $username = $_POST['username'];
-        if ($currentRole===1){
-            $role = '';
+        if ($currentRole == 1){
             $role = $_POST['role'];
         }
         $conn->query("UPDATE users SET usersName='$fullName', usersEmail='$email', usersUid='$username', usersRole=$role WHERE usersId=$id") or die("Query failed: " . mysqli_connect_error());
@@ -233,12 +232,14 @@ class User extends Db
         $conn = $this->connect();
         $name = $_POST["fullName"];
         $email = $_POST["e-mail"];
+        $currentRole = $_POST['currentRole'];
         $username = $_POST["username"];
         $pwd = $_POST["password"];
         $pwdRepeat = $_POST["passwordRepeat"];
         $role = 3;
-        $role = $_POST["role"];
-
+        if ($currentRole == 1) {
+            $role = $_POST["role"];
+        }
         //Check for empty input
         if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)){
             header("location: manage-users.php?error=emptyinput");
