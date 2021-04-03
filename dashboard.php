@@ -1,7 +1,7 @@
 <?php
 require_once 'header.php';
 if (!isset($_SESSION["useruid"])){
-    header("Location: index.php");
+    header("Location: loginscherm.php");
 }
 ?>
 
@@ -13,23 +13,25 @@ if (!isset($_SESSION["useruid"])){
 </section>
 <section class="dashboard-back" style="padding-top: 40px">
     <section class="dashboard-front">
+        <p class="event-title">Account details</p>
         <section class="content">
-            <p class="event-title">Account details</p>
-            <?php echo "<p>Username: " . $_SESSION["useruid"] . "</p>" ?>
+            <img src="img/user.png" alt="userProfile" style="width: 8%; display: inline">
             <?php
-            echo "<p>Role: ";
+            $role;
             if ($_SESSION["userRole"]===1){
-                    echo "Super Administrator";
-                } elseif ($_SESSION["userRole"]===2){
-                    "Administrator";
-                } "</p>"?>
+                $role = "Super Administrator";
+            } elseif ($_SESSION["userRole"]===2){
+                $role = "Administrator";
+            }
+            echo "<p style='display: inline-block;'>Username: " . $_SESSION["useruid"] . "<br>Role: " . $role . "</p>";
+            ?>
             <p class="welcometxt">Welcome back! <br><br>You are logged in with an administrator account.
                 This means that you are authorized to support the website.
                 You can do so using the Content Management System.</p>
         </section>
         <section class="img-row">
             <section class="img-column">
-                <img src="img/jazz.jpg" alt="Jazz" style="width: 100%;" class="image">
+                <img src="img/jazz.jpg" alt="Jazz" style="width: 80%;" class="image">
                 <a href="dashboard-jazz.php">
                     <section class="overlay">
                         <section class="overlay-text">Jazz</section>
@@ -37,7 +39,7 @@ if (!isset($_SESSION["useruid"])){
                 </a>
             </section>
             <section class="img-column">
-                <img src="img/food.jpg" alt="Food" style="width: 100%" class="image">
+                <img src="img/food.jpg" alt="Food" style="width: 80%" class="image">
                 <a href="dashboard-food.php">
                     <section class="overlay">
                         <section class="overlay-text">Food</section>
@@ -45,7 +47,7 @@ if (!isset($_SESSION["useruid"])){
                 </a>
             </section>
             <section class="img-column">
-                <img src="img/dance.jpg" alt="Dance" style="width: 100%" class="image">
+                <img src="img/dance.jpg" alt="Dance" style="width: 80%" class="image">
                 <a href="dashboard-dance.php">
                     <section class="overlay">
                         <section class="overlay-text">Dance</section>

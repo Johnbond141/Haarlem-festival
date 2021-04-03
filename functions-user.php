@@ -17,4 +17,9 @@ if (isset($_POST['uploadImage'])){
 if (isset($_POST['deleteImage'])){
     $userContr->userDeleteImageContr();
 }
+if (isset($_POST['user-delete-order'])){
+    $userContr->userDeleteOrderContr();
+}
+
+
 

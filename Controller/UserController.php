@@ -6,7 +6,7 @@ class UserController extends User{
         if (isset($_POST["submit"])){
             $this->loginUserModel();
         } else {
-            header("Location: index.php");
+            header("Location: loginscherm.php");
             exit();
         }
     }
@@ -15,7 +15,7 @@ class UserController extends User{
         if (isset($_POST["reset-request-submit"])){
             $this->resetPasswordRequestModel();
         } else {
-            header("location: index.php");
+            header("location: loginscherm.php");
         }
     }
     //Controller for actually resetting the password
@@ -24,7 +24,7 @@ class UserController extends User{
         if (isset($_POST["reset-password-submit"])){
             $this->resetPasswordModel();
         } else {
-            header("location: index.php");
+            header("location: loginscherm.php");
         }
     }
     public function getAllUsersContr($selected){
@@ -49,5 +49,12 @@ class UserController extends User{
     }
     public function userDeleteImageContr(){
         $this->userDeleteImage();
+    }
+    public function userOrderGetAllDataContr(){
+        $result = $this->getAllOrders();
+        return $result;
+    }
+    public function userDeleteOrderContr(){
+        $this->userDeleteOrder();
     }
 }

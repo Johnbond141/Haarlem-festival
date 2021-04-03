@@ -1,12 +1,20 @@
 <?php
-require_once 'header.php';
+include_once 'navBar.php';
+require_once 'Controller/UserController.php';
 ?>
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Haarlem Festival</title>
+</head>
+<body>
 <section class="login">
     <section class="main">
-        <p class="sign" align="center">Content Management System</p>
-        <p class="sign" align="center" style="font-size: 14px; padding-top: 5px">This is for authorized people only!</p>
-        <form class="form1" action="index.php" method="post">
+        <p class="sign" align="center">Login</p>
+        <form class="form1" action="login.php" method="post">
+            <input type="hidden" name="type" value="user">
             <input class="un " type="text" align="center" placeholder="Username" name="uid">
             <input class="pass" type="password" align="center" placeholder="Password" name="pwd">
             <button class="submit" align="center" name="submit">Log in</button>
@@ -24,5 +32,4 @@ require_once 'header.php';
         </section>
     </section>
 </section>
-
-</html>
+</body>

@@ -8,10 +8,14 @@ class User extends Db
         $conn = $this->connect();
         $username = $_POST["uid"];
         $pwd = $_POST["pwd"];
+        $type = $_POST["type"];
 
         //Check for empty input
         if (empty($username) || empty($pwd)) {
-            header("location: index.php?error=emptyinput");
+            if (empty($type)){
+                header("location: google.php");
+            }
+            header("location: loginscherm.php?error=emptyinput");
             exit();
         }
 
@@ -19,7 +23,7 @@ class User extends Db
         $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
         $stmt = mysqli_stmt_init($conn);
         if (mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: index.php?error=stmtfailed");
+            header("location: loginscherm.php?error=stmtfailed");
         }
         mysqli_stmt_bind_param($stmt, "ss", $username, $username);
         mysqli_stmt_execute($stmt);
@@ -29,7 +33,7 @@ class User extends Db
         if ($row = mysqli_fetch_assoc($resultData)) {
             $uidExists = $row;
         } else {
-            header("location: index.php?error=wronglogin");
+            header("location: loginscherm.php?error=wronglogin");
             exit();
         }
         mysqli_stmt_close($stmt);
@@ -39,7 +43,7 @@ class User extends Db
 
         //Check if the password is correct
         if ($checkPwd === false) {
-            header("location: index.php?error=wronglogin");
+            header("location: loginscherm.php?error=wronglogin");
             exit();
         } //Start a session when everything is correct
         elseif ($checkPwd === true) {
@@ -120,10 +124,10 @@ class User extends Db
 
         //validate the new password
         if (empty($password) || empty($passwordRepeat)) {
-            header("Location: index.php");
+            header("Location: loginscherm.php");
             exit();
         } elseif ($password != $passwordRepeat) {
-            header("Location: index.php");
+            header("Location: loginscherm.php");
             exit();
         }
         $currentDate = date("U");
@@ -182,7 +186,7 @@ class User extends Db
                                 } else {
                                     mysqli_stmt_bind_param($stmt, "s", $tokenEmail);
                                     mysqli_stmt_execute($stmt);
-                                    header("Location: index.php?newpwd=passwordupdated");
+                                    header("Location: loginscherm.php?newpwd=passwordupdated");
                                 }
                             }
                         }
@@ -338,5 +342,16 @@ class User extends Db
         $path = "img/" . $image;
         unlink($path);
         header("Location: img-library.php");
+    }
+    protected function getAllOrders(){
+        $conn = $this->connect();
+        $result = $conn->query("SELECT * FROM orders");
+        return $result;
+    }
+    protected function userDeleteOrder(){
+        $conn = $this->connect();
+        $id = $_POST['id'];
+        $conn->query("DELETE FROM orders WHERE orderID=$id");
+        header("Location: cms-testpayment.php");
     }
 }

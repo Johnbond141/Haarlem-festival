@@ -1,7 +1,7 @@
 <?php
 require_once 'header.php';
 if (!isset($_SESSION["useruid"])){
-    header("Location: index.php");
+    header("Location: loginscherm.php");
 }
 ?>
 <body>
@@ -36,8 +36,8 @@ if (!isset($_SESSION["useruid"])){
         </section>
         <section class="row">
             <section class="column">
-                <a href="create-payment.php" style="text-decoration: none;">
-                    <h3 class="dashboardButtonText">Register payment</h3>
+                <a href="cms-testpayment.php" style="text-decoration: none;">
+                    <h3 class="dashboardButtonText">Register Payment</h3>
                 </a>
             </section>
             <section class="column">

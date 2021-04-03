@@ -2,7 +2,7 @@
 require_once 'header.php';
 require_once 'functions-user.php';
 if (!isset($_SESSION["useruid"])){
-    header("Location: index.php");
+    header("Location: loginscherm.php");
 }
 ?>
 <header class="jumbotron-img">
