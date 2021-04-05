@@ -32,7 +32,10 @@ if(isset($_POST['confirm'])){
 require_once 'header.php';
 require_once 'functions-user.php';
 if (!isset($_SESSION["useruid"])){
-    header("Location: loginscherm.php");}
+    header("Location: loginscherm.php");
+}
+if ($_SESSION["userRole"] == 3){
+    header("Location: index.php");}
 ?>
 <body>
 <header class="header">

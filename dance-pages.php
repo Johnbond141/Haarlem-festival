@@ -4,6 +4,9 @@ require_once 'functions-dance.php';
 if (!isset($_SESSION["useruid"])){
     header("Location: loginscherm.php");
 }
+if ($_SESSION["userRole"] == 3){
+    header("Location: index.php");
+}
 ?>
 
 <body>

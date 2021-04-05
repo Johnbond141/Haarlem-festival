@@ -7,6 +7,7 @@ require_once 'header.php';
         <p class="sign" align="center">Content Management System</p>
         <p class="sign" align="center" style="font-size: 14px; padding-top: 5px">This is for authorized people only!</p>
         <form class="form1" action="loginscherm.php" method="post">
+            <input type="hidden" name="type" value="admin">
             <input class="un " type="text" align="center" placeholder="Username" name="uid">
             <input class="pass" type="password" align="center" placeholder="Password" name="pwd">
             <button class="submit" align="center" name="submit">Log in</button>

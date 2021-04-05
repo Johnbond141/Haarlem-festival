@@ -3,6 +3,9 @@ require_once 'header.php';
 if (!isset($_SESSION["useruid"])){
     header("Location: loginscherm.php");
 }
+if ($_SESSION["userRole"] == 3){
+    header("Location: index.php");
+}
 ?>
 <body>
 <section class="jumbotron-img">

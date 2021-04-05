@@ -43,7 +43,7 @@ if (isset($_SESSION["useruid"])){
         </ul>
         <ul class='nav navbar-nav navbar-right'>
             <li><a href='manage-users.php'>Manage users</a></li>
-            <li><a  href='Model/logout.php'>Log out</a></li>
+            <li><a  href='Model/logoutcms.php'>Log out</a></li>
         </ul>
     </section>
 </nav>

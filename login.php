@@ -18,7 +18,8 @@ require_once 'Controller/UserController.php';
             <input class="un " type="text" align="center" placeholder="Username" name="uid">
             <input class="pass" type="password" align="center" placeholder="Password" name="pwd">
             <button class="submit" align="center" name="submit">Log in</button>
-            <p class="forgot" align="center" style="padding-bottom: 10px"><a href="reset-password.php">Forgot Password?</p>
+            <p class="forgot" align="center" style="padding-bottom: 10px"><a href="reset-password.php">Forgot Password?</a></p>
+            <p class="forgot" align="center" style="padding-bottom: 10px">Dont have a account yet? <a href="signup.php">Sign up!</a></p>
         </form>
         <section class="validation">
             <?php

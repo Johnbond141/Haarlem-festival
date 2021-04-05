@@ -12,10 +12,11 @@ class User extends Db
 
         //Check for empty input
         if (empty($username) || empty($pwd)) {
-            if (empty($type)){
-                header("location: google.php");
-            }
+            if ($type == "user") {
+                header("location: login.php?error=emptyinput");;
+            }else{
             header("location: loginscherm.php?error=emptyinput");
+            }
             exit();
         }
 
@@ -23,7 +24,11 @@ class User extends Db
         $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
         $stmt = mysqli_stmt_init($conn);
         if (mysqli_stmt_prepare($stmt, $sql)) {
-            header("location: loginscherm.php?error=stmtfailed");
+            if ($type == "user") {
+                header("location: login.php?error=stmtfailed");;
+            }else {
+                header("location: loginscherm.php?error=stmtfailed");
+            }
         }
         mysqli_stmt_bind_param($stmt, "ss", $username, $username);
         mysqli_stmt_execute($stmt);
@@ -33,7 +38,10 @@ class User extends Db
         if ($row = mysqli_fetch_assoc($resultData)) {
             $uidExists = $row;
         } else {
-            header("location: loginscherm.php?error=wronglogin");
+            if ($type == "user") {
+                header("location: login.php?error=wronglogin");;
+            }else {
+            header("location: loginscherm.php?error=wronglogin");}
             exit();
         }
         mysqli_stmt_close($stmt);
@@ -43,7 +51,11 @@ class User extends Db
 
         //Check if the password is correct
         if ($checkPwd === false) {
-            header("location: loginscherm.php?error=wronglogin");
+            if ($type == "user") {
+                header("location: login.php?error=wronglogin");;
+            }else {
+                header("location: loginscherm.php?error=wronglogin");
+            }
             exit();
         } //Start a session when everything is correct
         elseif ($checkPwd === true) {
@@ -51,7 +63,14 @@ class User extends Db
             $_SESSION["userid"] = $uidExists["usersId"];
             $_SESSION["useruid"] = $uidExists["usersUid"];
             $_SESSION["userRole"] = $uidExists["usersRole"];
-            header("location: dashboard.php");
+            if ($type == "user") {
+                header("location: index.php");
+            } elseif ($_SESSION["userRole"] == 3){
+                header("location: index.php");
+            }
+            else {
+                header("location: dashboard.php");
+            }
             exit();
         }
     }
@@ -246,25 +265,40 @@ class User extends Db
         }
         //Check for empty input
         if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)){
+            if ($currentRole == 3) {
+                header("location: signup.php?error=emptyinput");
+            } else{
             header("location: manage-users.php?error=emptyinput");
+            }
             exit();
         }
         //Check if the username is valid
         if (!preg_match("/^[a-zA-Z0-9]*$/", $username))
         {
+            if ($currentRole == 3) {
+                header("location: signup.php?error=invaliduid");
+            } else{
             header("location: manage-users?error=invaliduid");
+            }
             exit();
         }
         //Check if the email is valid
         if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-        {
+        {if ($currentRole == 3) {
+            header("location: signup.php?error=invalidemail");
+        } else{
             header("location: manage-users?error=invalidemail");
+        }
             exit();
         }
         //Check if the password has been typed in correctly
         if ($pwd !== $pwdRepeat)
         {
-            header("location: manage-users?error=passwordsdontmatch");
+            if ($currentRole == 3) {
+                header("location: signup.php?error=passwordsdontmatch");
+            } else {
+                header("location: manage-users?error=passwordsdontmatch");
+            }
             exit();
         }
         //Check if the username has already been used
@@ -272,7 +306,11 @@ class User extends Db
         $stmt = mysqli_stmt_init($conn);
         if (mysqli_stmt_prepare($stmt, $sql))
         {
-            header("location: manage-users?error=stmtfailed");
+            if ($currentRole == 3) {
+                header("location: signup.php?error=stmtfailed");
+            } else {
+                header("location: manage-users?error=stmtfailed");
+            }
         }
         mysqli_stmt_bind_param($stmt, "ss", $username, $username);
         mysqli_stmt_execute($stmt);
@@ -281,14 +319,22 @@ class User extends Db
 
         if ($row = mysqli_fetch_assoc($resultData))
         {
+            if ($currentRole == 3) {
+                header("location: signup.php?error=usernametaken");
+            } else{
             header("location: manage-users?error=usernametaken");
+            }
             exit();
         }
 
         mysqli_stmt_close($stmt);
         //Check if the input is to long for security reasons
         if (strlen($name) > 35 || strlen($email) > 35 || strlen($username) > 35 || strlen($pwd) > 35 || strlen($pwdRepeat) > 35) {
+            if ($currentRole == 3) {
+                header("location: signup.php?error=inputtolong");
+            } else{
             header("location: manage-users?error=inputtolong");
+            }
             exit();
         }
         //If everything is correct, make the account and automatically save the registration date
@@ -297,7 +343,11 @@ class User extends Db
         $stmt = mysqli_stmt_init($conn);
         if (mysqli_stmt_prepare($stmt, $sql))
         {
-            header("location: manage-users?error=stmtfailed");
+            if ($currentRole == 3) {
+                header("location: signup.php?error=stmtfailed");
+            } else {
+                header("location: manage-users?error=stmtfailed");
+            }
         }
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
@@ -306,7 +356,10 @@ class User extends Db
         mysqli_stmt_bind_param($stmt, "ssssss", $name, $email, $username, $hashedPwd, $registrationDate, $role);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
-        header("location: manage-users?error=none");
+        if ($currentRole == 3) {
+            header("location: signup.php?error=none");
+        } else{
+        header("location: manage-users?error=none");}
         exit();
     }
     protected function userAddImage(){

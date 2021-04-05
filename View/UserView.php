@@ -27,4 +27,27 @@ class UserView {
             }
         }
     }
+    //Show feedback for signing in
+    public function showSignUp()
+    {
+        if (isset($_GET["error"])) {
+            if ($_GET["error"] == "emptyinput") {
+                echo "<p>Fill in all fields!</p>";
+            } elseif ($_GET["error"] == "invaliduid") {
+                echo "<p>Choose a proper username!</p>";
+            } elseif ($_GET["error"] == "invalidemail") {
+                echo "<p>Choose a proper email!</p>";
+            } elseif ($_GET["error"] == "passwordsdontmatch") {
+                echo "<p>Passwords doesn't match!</p>";
+            } elseif ($_GET["error"] == "stmtfailed") {
+                echo "<p>something went wrong, try again!</p>";
+            } elseif ($_GET["error"] == "usernametaken") {
+                echo "<p>Username already taken!</p>";
+            } elseif ($_GET["error"] == "inputtolong") {
+                echo "<p>Input to long!</p>";
+            } elseif ($_GET["error"] == "none") {
+                echo "<p>You have signed up!</p>";
+            }
+        }
+    }
 }
