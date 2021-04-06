@@ -16,11 +16,11 @@ if ($_SESSION["userRole"] == 3){
 <section class="dashboard-back">
     <a href="dashboard.php" class="GoBackButton">Back</a>
     <section class="dashboard-front">
+        <p class="event-title">Jazz event</p>
+        <p class="event-content">Here you can support the jazz page using the following functions</p>
         <section class="content">
-            <p class="event-title">Jazz event</p>
-            <p class="event-content">Here you can support the jazz page using the following functions</p>
         </section>
-        <section class="row">
+        <section class="rij">
             <section class="column">
                 <a href="jazz-pages.php" style="text-decoration: none;">
                     <h3 class="dashboardButtonText">Edit pages</h3>
@@ -32,19 +32,12 @@ if ($_SESSION["userRole"] == 3){
                     <h3 class="dashboardButtonText">Edit Program</h3>
                 </a>
             </section>
-
-            <section class="column">
-                <h3 class="dashboardButtonText">Show Invoices</h3>
-            </section>
         </section>
-        <section class="row">
+        <section class="rij">
             <section class="column">
                 <a href="cms-testpayment.php" style="text-decoration: none;">
                     <h3 class="dashboardButtonText">Register Payment</h3>
                 </a>
-            </section>
-            <section class="column">
-                <h3 class="dashboardButtonText">Export Data</h3>
             </section>
             <section class="column">
                 <a href="img-library.php" style="text-decoration: none;">
@@ -55,4 +48,7 @@ if ($_SESSION["userRole"] == 3){
     </section>
 </section>
 
+<?php
+include_once 'footercms.php';
+?>
 </body>

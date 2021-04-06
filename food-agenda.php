@@ -12,18 +12,21 @@ if ($_SESSION["userRole"] == 3){
 <body>
 <header class="header">
     <h1 class="eventhead">Food</h1>
-    <h2 class="slogan">Food things</h2>
+    <h2 class="slogan">Try something new!</h2>
 </header>
 <a href="dashboard-food.php" class="GoBackButton">Back</a>
 <form action="food-agenda.php" method="post">
     <section class="agenda">
+        <article class="agenda">
+            <h1>Food Agenda</h1>
+        </article>
         <?php
         $foodContr = new FoodController();
         $result = $foodContr->foodAgendaGetAllDataContr();
         ?>
         <section class="container">
             <section class="row justify-content-center">
-                <table class="table">
+                <table class="table" style="font-size: 90%">
                     <thead>
                     <tr>
                         <th class="table-small">Restaurant</th>
@@ -54,7 +57,7 @@ if ($_SESSION["userRole"] == 3){
                             <td class="table-small"><?php echo $row['Type']; ?></td>
                             <td>
                                 <a href="food-agenda.php?edit=<?php echo $row['restaurant_Id']; ?>"
-                                   class="btn btn-info btn-sm" style="margin-bottom: 5px">Edit</a>
+                                   class="btn btn-primary btn-sm" style="margin-bottom: 5px">Edit</a>
                                 <form action="functions-food.php" method="post" style="display: inline">
                                     <input type="hidden" name="id" value="<?php echo $row['restaurant_Id']; ?>">
                                     <button class="btn btn-danger btn-sm" name="food-delete" type="submit">Delete</button>
@@ -121,7 +124,12 @@ if ($_SESSION["userRole"] == 3){
             </section>
 </form>
 </section>
+</section>
+</section>
 </form>
+<?php
+include_once 'footercms.php';
+?>
 </body>
 
 </html>

@@ -61,4 +61,7 @@ if ($_SESSION["userRole"] == 3){
     </section>
 </section>
 </section>
+<?php
+include_once 'footercms.php';
+?>
 </body>

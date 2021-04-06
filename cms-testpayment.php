@@ -87,4 +87,9 @@ if ($_SESSION["userRole"] == 3){
                 <button type="submit" style="margin-left: 33%; margin-bottom: 10px; padding-bottom: 5px" class="submit" name="confirm">Confirm</button>
         </section>
     </section>
+    </section>
 </form>
+<?php
+include_once 'footercms.php';
+?>
+

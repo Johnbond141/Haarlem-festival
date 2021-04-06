@@ -139,6 +139,9 @@ if ($_SESSION["userRole"] == 3){
 
 </form>
 </section>
+<?php
+include_once 'footercms.php';
+?>
 </body>
 
 </html>

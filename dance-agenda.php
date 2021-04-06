@@ -68,7 +68,7 @@ if ($_SESSION["userRole"] == 3){
                             <td><?php echo $row['Price']; ?></td>
                             <td>
                                 <a href="dance-agenda.php?edit=<?php echo $row['performance_Id']; ?>"
-                                   class="btn btn-info btn-sm">Edit</a>
+                                   class="btn btn-primary btn-sm">Edit</a>
                                 <form action="functions-dance.php " method="post" style="display: inline">
                                     <input type="hidden" name="id" value="<?php echo $row['performance_Id']; ?>">
                                     <button class="btn btn-danger btn-sm" name="dance-delete" type="submit">Delete</button>
@@ -132,7 +132,12 @@ if ($_SESSION["userRole"] == 3){
             </section>
 </form>
 </section>
+</section>
+</section>
 </form>
+<?php
+include_once 'footercms.php';
+?>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ require_once 'Controller/UserController.php';
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CMS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/cmscss.css">
@@ -20,33 +20,63 @@ require_once 'Controller/UserController.php';
     <title>Sign in</title>
 </head>
 <body>
+</body>
 <?php
 if (isset($_SESSION["useruid"])){
-    echo "
-<nav class='navbar navbar-inverse'>
-    <section class='container-fluid'>
-        <section class='navbar-header'>
-            <a class='navbar-brand' href='dashboard.php'>Haarlem Festival</a>
+    echo '<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-white" href="dashboard.php">Haarlem Festival CMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <section class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Jazz
+        </a>
+        <section class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="jazz-pages.php">Edit pages</a>
+          <a class="dropdown-item" href="jazz-agenda.php">Edit program</a>
+          <a class="dropdown-item" href="cms-testpayment.php">Register payment</a>
+          <a class="dropdown-item" href="img-library.php">Image library</a>
         </section>
-        <ul class='nav navbar-nav'>
-            <li><a href='dashboard.php'>Home</a></li>
-            <li class='nav-item dropdown'>
-                <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                Events
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Food
+        </a>
+        <section class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="food-pages.php">Edit pages</a>
+          <a class="dropdown-item" href="food-agenda.php">Edit program</a>
+          <a class="dropdown-item" href="cms-testpayment.php">Register payment</a>
+          <a class="dropdown-item" href="img-library.php">Image library</a>
+        </section>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dance
+        </a>
+        <section class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="dance-pages.php">Edit pages</a>
+          <a class="dropdown-item" href="dance-agenda.php">Edit program</a>
+          <a class="dropdown-item" href="cms-testpayment.php">Register payment</a>
+          <a class="dropdown-item" href="img-library.php">Image library</a>
+        </section>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="manage-users.php">Manage users</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Model/logoutcms.php">
+                  Logout
                 </a>
-                <section class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                    <a class='dropdown-item' href='dashboard-jazz.php'>Jazz</a>
-                    <a class='dropdown-item' href='dashboard-food.php'>Food</a>
-                    <a class='dropdown-item' href='dashboard-dance.php'>Dance</a>
-                </section>
             </li>
-        </ul>
-        <ul class='nav navbar-nav navbar-right'>
-            <li><a href='manage-users.php'>Manage users</a></li>
-            <li><a  href='Model/logoutcms.php'>Log out</a></li>
-        </ul>
-    </section>
-</nav>
-";
+            </ul>
+        </section>
+    </nav>
+  </section>
+</nav>';
 }
 ?>

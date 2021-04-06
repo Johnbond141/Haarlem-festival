@@ -17,7 +17,7 @@ if ($_SESSION["userRole"] == 3){
 <a href="dashboard.php" class="GoBackButton">Back</a>
 <section class="agenda">
     <article class="title-wrapper">
-        <h1>Manage users</h1>
+        <h1>Image Library</h1>
     </article>
     <section class="container">
         <section class="row justify-content-center">
@@ -53,3 +53,10 @@ if ($_SESSION["userRole"] == 3){
                 <input class="" type="file" name="file">
                 <input class="btn btn-primary" type="submit" name="uploadImage" value="Upload">
             </form>
+        </section>
+    </section>
+</section>
+<?php
+include_once 'footercms.php';
+?>
+

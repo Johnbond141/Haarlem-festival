@@ -108,14 +108,14 @@ body, html {
     padding: 0;
     margin: 0;
 }
-.row{
-    margin-left: 2%;
+.rij{
+    margin-left: 8%;
 }
 
 .column {
     float: left;
-    width: 22%;
-    margin: 4%;
+    width: 25%;
+    margin: 4% 10%;
     padding: 10px;
     border-style: solid;
     border-width: 2px;
@@ -298,7 +298,7 @@ body{
 /* Header section */
 
 .header{
-    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/jazzheader.png");
+    background-image: linear-gradient(to left, #7d5cccd4, #fc9873db), url("../img/settings.png");
     background-size: cover;
     width: auto;
     height: 250px;
@@ -344,7 +344,7 @@ section.agenda{
     border-color: white;
     padding-bottom: 2%;
     margin: 60px auto auto;
-    margin-bottom: 50%;
+    margin-bottom: 10%;
     flex-flow: column;
 }
 

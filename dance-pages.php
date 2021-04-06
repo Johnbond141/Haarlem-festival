@@ -49,7 +49,7 @@ if ($_SESSION["userRole"] == 3){
                             <td><?php echo $row['paragraph3']; ?></td>
                             <td>
                                 <a href="dance-pages.php?edit=<?php echo $row['page_id']; ?>"
-                                   class="btn btn-info btn-sm">Edit</a>
+                                   class="btn btn-primary btn-sm" style="margin-bottom: 5px">Edit</a>
                                 <form action="functions-dance.php" method="post" style="display: inline">
                                     <input type="hidden" name="id" value="<?php echo $row['page_id']; ?>">
                                     <button class="btn btn-danger btn-sm" name="dance-delete-page" type="submit">Delete</button>
@@ -82,7 +82,7 @@ if ($_SESSION["userRole"] == 3){
             ?>
             <section class="main" style="margin-top: 0; width: 80%;">
                 <p class="sign" style="margin-left: 42%">Add/Edit</p>
-                <form class="form1" action="functions-dance.php" method="post" ">
+                <form class="form1" action="functions-dance.php" method="post"
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <section style="display: inline-block; width: 45%; margin-left: 2.5%;">
                     <input type="text" name="name" align="center" class="un" value="<?php echo $name; ?>" placeholder="Page name...">
@@ -102,9 +102,12 @@ if ($_SESSION["userRole"] == 3){
                 <?php endif;?>
 </form>
 </section>
-</form>
+</section>
 </section>
 </form>
+<?php
+include_once 'footercms.php';
+?>
 </body>
 
 </html>
